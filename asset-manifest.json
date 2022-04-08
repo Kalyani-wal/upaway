@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.897d9177.css",
+    "main.js": "/static/js/main.3a7a9670.js",
+    "static/media/bg-landing-left-bottom-success.png": "/static/media/bg-landing-left-bottom-success.3e5880c5bbd8cea7b441.png",
+    "static/media/bg-landing-right-up.png": "/static/media/bg-landing-right-up.71d2c0c3784f3ce585f6.png",
+    "static/media/bg-landing-left-bottom.png": "/static/media/bg-landing-left-bottom.92c1372c88dc8a1aaebf.png",
+    "static/media/CircularStd-Bold.otf": "/static/media/CircularStd-Bold.e14227748fec7e7df70a.otf",
+    "static/media/CircularStd-Medium.otf": "/static/media/CircularStd-Medium.61a1467267209fdd98dd.otf",
+    "static/media/CircularStd-Book.otf": "/static/media/CircularStd-Book.41d2c3bd12c9e939292f.otf",
+    "static/media/logo-spalsh.svg": "/static/media/logo-spalsh.29a6ff6332330dedd464200c68f603da.svg",
+    "static/media/logo.svg": "/static/media/logo.355c70df8164b88c5ef84ae96081dfe2.svg",
+    "static/media/eye.svg": "/static/media/eye.e864207a2989993bbb89273b5ca65e99.svg",
+    "index.html": "/index.html",
+    "main.897d9177.css.map": "/static/css/main.897d9177.css.map",
+    "main.3a7a9670.js.map": "/static/js/main.3a7a9670.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.897d9177.css",
+    "static/js/main.3a7a9670.js"
+  ]
+}
