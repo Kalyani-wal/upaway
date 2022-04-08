@@ -1,0 +1,22 @@
+.wrapper-page-layout {
+  background-color: $color-grey-secondary;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  .layout-left-section {
+    min-width: 280px;
+    background-color: $white;
+  }
+  .layout-page-section {
+    flex-grow: 1;
+    padding: 100px 40px 40px;
+    .page-header {
+      > h1 {
+        margin-bottom: 12px;
+        &:empty {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

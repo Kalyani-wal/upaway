@@ -1,0 +1,22 @@
+.registration-container.login-container {
+  .logo {
+    margin-bottom: 27px;
+  }
+  .title {
+    margin-bottom: 65px;
+  }
+  form {
+    .container-forgot-remember {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 90px;
+      width: 100%;
+      .button-link.button-forgot-pwd {
+        font-family: $font-inter;
+        font-weight: 400;
+        font-size: 14px;
+        color: $color-theme;
+      }
+    }
+  }
+}

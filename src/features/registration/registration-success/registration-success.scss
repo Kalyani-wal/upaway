@@ -1,0 +1,37 @@
+.layout-wrapper.layout-wrapper-success {
+  background: $color-primary url('../../../assets/images/bg-landing-right-up-success.png') no-repeat right top;
+  background-size: 300px 158px;
+  &:before {
+    position: absolute;
+    content: "";
+    left: -30px;
+    top: -50px;
+    width: 180px;
+    height: 180px;
+    background-color: $color-violet;
+    border-radius: 50%;
+  }
+  &:after {
+    display: none;
+  }
+  .layout-content {
+    background: url('../../../assets/images/bg-landing-left-bottom-success.png') no-repeat left bottom;
+    background-size: 386px 182px;
+    &::before {
+      right: -60px;
+      left: auto;
+      top: calc(50% - 81px);
+    }
+  }
+  .container-message {
+    @include flex-d(flex-start, center, column);
+    h2 {
+      color: $white;
+      font-size: 50px;
+      line-height: 50px;
+      text-align: center;
+      margin-bottom: 60px;
+      text-transform: unset;
+    }
+  }
+}

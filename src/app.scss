@@ -1,0 +1,10 @@
+@import './assets/styles/_fonts.scss';
+@import './assets/styles/_color.scss';
+@import './assets/styles/_mixins.scss';
+@import './assets/styles/_common.scss';
+
+// application features
+@import './features/features.scss';
+
+// Common components
+@import './common/components/components.scss';

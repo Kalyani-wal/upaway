@@ -1,0 +1,236 @@
+@import "./fonts";
+@import "./color";
+@import "./mixins";
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  &:focus {
+    outline: none !important;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+}
+
+h1 {
+  font-family: $font-circular-bold;
+  font-size: 40px;
+  line-height: 51px;
+  color: #3f434a;
+}
+
+h2 {
+  font-family: $font-inter;
+  font-weight: 600;
+  font-size: 30px;
+  color: #1c4651;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-family: $font-circular-book;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #101828;
+}
+
+ul {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.button {
+  font-family: $font-circular-book;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 325px;
+  height: 64px;
+  background-color: #1c4651;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-link {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  color: #fa966b;
+  background: transparent;
+}
+
+.container-table {
+  background-color: #fff;
+  .table {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    overflow: hidden;
+    border-collapse: collapse;
+    width: 100%;
+    >:not(:first-child) {
+      border: none;
+    }
+    >:not(caption)>*>* {
+      border: none;
+    }
+    th,
+    td {
+      display: flex;
+      align-items: center;
+      font-family: $font-circular-book;
+      font-weight: 400;
+      color: #667085;
+      padding: 5px;
+      &:first-child {
+        padding-left: 24px;
+      }
+    }
+    tr {
+      display: flex;
+      width: 100%;
+      border-bottom: 1px solid #eaecf0;
+      td {
+        font-size: 14px;
+        line-height: 20px;
+        min-height: 72px;
+        div.name-info {
+          display: flex;
+          align-items: center;
+          color: #101828;
+          span {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f9fafb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #475467;
+            text-transform: uppercase;
+            margin-right: 12px;
+            &:empty {
+              background-color: #e5e5e5;
+            }
+          }
+        }
+      }
+      th {
+        font-size: 12px;
+        line-height: 18px;
+        min-height: 44px;
+      }
+    }
+    tbody {
+      &::-webkit-scrollbar {
+        width: 7px;
+        background-color: #fff;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #EAECF0;
+        border-radius: 50vh;
+      }
+      td {
+        padding-left: 6px;
+        &:first-child {
+          padding-left: 25px;
+        }
+      }
+    }
+    thead {
+      display: block;
+      flex-shrink: 0;
+      background-color: #fcfcfd;
+      border-bottom: 1px solid #eaecf0;
+      tr {
+        // max-width: calc(100% - 7px);
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.user-type {
+  display: inline-flex;
+  min-height: 22px;
+  padding: 2px 8px 2px 20px;
+  font-family: $font-circular-book;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #667085;
+  border-radius: 50vh;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    left: 7px;
+    top: calc(50% - 3px);
+  }
+  &.full-trip {
+    background-color: #eff8ff;
+    color: #175cd3;
+    &::before {
+      background-color: #2e90fa;
+    }
+  }
+  &.free {
+    background-color: #fdf2fa;
+    color: #c11574;
+    &::before {
+      background-color: #ee46bc;
+    }
+  }
+  &.monthly {
+    background-color: #ecfdf3;
+    color: #027a48;
+    &::before {
+      background-color: #12b76a;
+    }
+  }
+}

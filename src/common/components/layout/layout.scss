@@ -1,0 +1,33 @@
+.layout-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: $bg-registration url('../../../assets/images/bg-landing-right-up.png') no-repeat right 0 top 105px;
+  background-size: 288px 220px;
+  position: relative;
+  &:after{
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 95px;
+    width: 228px;
+    height: 150px;
+    background: url('../../../assets/images/bg-landing-right-bottom.png') no-repeat;
+    background-size: contain;
+  }
+  .layout-content {
+    @include flex(center, center);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: url('../../../assets/images/bg-landing-left-bottom.png') no-repeat left 0 bottom 200px;
+    background-size: 274px 200px;
+    &::before {
+      position: absolute;
+      content: "";
+      @include circle(162px);
+      left: -62px;
+      top: 105px;
+      background-color: $color-yellow-secondary;
+    }
+  }
+}

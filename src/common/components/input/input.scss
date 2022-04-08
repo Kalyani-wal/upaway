@@ -1,0 +1,66 @@
+.input-field {
+  position: relative;
+
+  label {
+    @include font-inter-reg($color-light, 14px);
+    display: block;
+    line-height: 17.5px;
+    margin-bottom: 10px;
+  }
+
+  div.error-msg {
+    @include font-circular-reg(14px, 20px, $color-error-secondary);
+    margin-top: 6px;
+  }
+
+  input {
+    @include font-circular-reg(14px, 20px, $color-header-secondary);
+    outline: 0;
+    min-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid $color-input-border;
+    padding: 10px 16px;
+    background-color: $white;
+
+    &[type="password"] {
+      padding-right: 40px;
+    }
+    &:-internal-autofill-selected {
+      background-color: $white !important;
+      color: $color-header-secondary !important;
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+
+    &:focus {
+      border: 1px solid $color-primary;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    &.md {
+      height: 44px;
+    }
+
+    &.sm {
+      height: 40px;
+    }
+  }
+  .icon-eye, .error-icon {
+    position: absolute;
+    right: 16px;
+    top: 36px;
+    height: 14px;
+  }
+  .icon-eye {
+    cursor: pointer;
+  }
+}

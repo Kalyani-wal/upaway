@@ -1,0 +1,46 @@
+.registration-container {
+  @include flex-d(flex-start, center, column);
+  background-color: $white;
+  width: 600px;
+  padding: 85px 100px 40px;
+  border-radius: 20px;
+  min-height: 675px;
+  max-height: 95vh;
+  overflow: auto;
+  .logo {
+    display: block;
+    margin-bottom: 45px;
+  }
+  .title {
+    margin-bottom: 45px;
+  }
+  form {
+    @include flex-d(flex-start, center, column);
+    .input-field {
+      margin-bottom: 30px;
+      &:nth-last-of-type(1) {
+        margin-bottom: 45px;
+      }
+    }
+    .passowrd-container {
+      margin-bottom: 30px;
+      span.password-length {
+        @include font-circular-reg(14px, 20px, $color-green-tertiary);
+        display: block;
+        margin-top: 6px;
+      }
+      .input-field {
+        margin-bottom: 0;
+      }
+    }
+    .button-register {
+      margin-bottom: 30px;
+    }
+  }
+  .login-text {
+    @include font-circular-reg(14px, 18px, $color-light);
+    button {
+      font-family: $font-circular-book;
+    }
+  }
+}

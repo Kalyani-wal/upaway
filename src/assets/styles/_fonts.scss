@@ -1,0 +1,24 @@
+/* ==============================================================================
+******************   Font Styles For the Application   *************************
+============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@font-face {
+  font-family: circularBold;
+  src: url(./fonts/CircularStd-Bold.otf);
+}
+
+@font-face {
+  font-family: circularMedium;
+  src: url(./fonts/CircularStd-Medium.otf);
+}
+
+@font-face {
+  font-family: circularBook;
+  src: url(./fonts/CircularStd-Book.otf);
+}
+
+$font-inter: 'Inter', sans-serif;
+$font-circular-bold: circularBold;
+$font-circular-book: circularBook;

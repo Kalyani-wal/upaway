@@ -1,0 +1,34 @@
+.container-pagination {
+  @include flex(space-between, center);
+  margin-top: 20px;
+  padding: 0 24px;
+  a,
+  span {
+    @include font-circular-reg(14px, 20px, $color-tabs);
+    text-decoration: none;
+  }
+  .page-numbers {
+    display: flex;
+    align-items: center;
+    a {
+      @include flex(center, center);
+      @include circle(40px);
+      margin: 0 5px;
+      &.active {
+        color: $color-orange-secondary;
+        background-color: $bg-primary;
+      }
+    }
+  }
+  a.prevoius {
+    display: flex;
+    align-items: center;
+    img {
+      width: 12px;
+      margin-right: 12px;
+    }
+    &.next img {
+      margin: 0 0 0 12px;
+    }
+  }
+}
