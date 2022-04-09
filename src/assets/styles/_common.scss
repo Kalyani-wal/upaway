@@ -2,10 +2,6 @@
 @import "./color";
 @import "./mixins";
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
 body {
   padding: 0;
   margin: 0;
@@ -16,6 +12,19 @@ body {
   &:focus {
     outline: none !important;
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 img {
@@ -34,39 +43,19 @@ ul {
   margin: 0;
 }
 
-* {
-  h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-}
-
 h1 {
   font-family: $font-circular-bold;
   font-size: 40px;
   line-height: 51px;
-  color: #3f434a;
+  color: $color-header;
 }
 
 h2 {
   font-family: $font-inter;
   font-weight: 600;
   font-size: 30px;
-  color: #1c4651;
+  color: $color-theme;
   text-transform: capitalize;
-}
-
-h3 {
-  font-family: $font-circular-book;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #101828;
 }
 
 ul {
@@ -76,17 +65,11 @@ ul {
 }
 
 .button {
-  font-family: $font-circular-book;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include font-circular-reg(16px, 24px, $white);
+  @include flex(center, center);
   width: 325px;
   height: 64px;
-  background-color: #1c4651;
+  background-color: $color-theme;
   border: none;
   outline: none;
   border-radius: 10px;
@@ -97,12 +80,13 @@ ul {
   padding: 0;
   border: none;
   cursor: pointer;
-  color: #fa966b;
+  color: $color-primary;
   background: transparent;
 }
 
 .container-table {
-  background-color: #fff;
+  background-color: $white;
+  border-radius: 8px;
   .table {
     display: flex;
     flex-flow: column;
@@ -120,9 +104,6 @@ ul {
     td {
       display: flex;
       align-items: center;
-      font-family: $font-circular-book;
-      font-weight: 400;
-      color: #667085;
       padding: 5px;
       &:first-child {
         padding-left: 24px;
@@ -131,28 +112,23 @@ ul {
     tr {
       display: flex;
       width: 100%;
-      border-bottom: 1px solid #eaecf0;
+      border-bottom: 1px solid $color-border;
       td {
-        font-size: 14px;
-        line-height: 20px;
+        @include font-circular-reg(14px, 20px, $color-tabs);
         min-height: 72px;
         div.name-info {
           display: flex;
           align-items: center;
-          color: #101828;
+          color: $color-header-secondary;
           span {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #f9fafb;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #475467;
+            @include circle(40px);
+            @include flex(center, center);
+            background-color: $color-light-grey;
+            color: $color-text-secondary;
             text-transform: uppercase;
             margin-right: 12px;
             &:empty {
-              background-color: #e5e5e5;
+              background-color: $color-grey-secondary;
             }
           }
         }
@@ -166,10 +142,10 @@ ul {
     tbody {
       &::-webkit-scrollbar {
         width: 7px;
-        background-color: #fff;
+        background-color: $white;
       }
       &::-webkit-scrollbar-thumb {
-        background-color: #EAECF0;
+        background-color: $color-border;
         border-radius: 50vh;
       }
       td {
@@ -182,10 +158,10 @@ ul {
     thead {
       display: block;
       flex-shrink: 0;
-      background-color: #fcfcfd;
-      border-bottom: 1px solid #eaecf0;
+      background-color: $color-grey-tertiary;
+      border-bottom: 1px solid $color-border;
+      border-radius: 8px 8px 0 0;
       tr {
-        // max-width: calc(100% - 7px);
         border-bottom: none;
       }
     }
@@ -193,44 +169,38 @@ ul {
 }
 
 .user-type {
+  @include font-circular-reg(12px, 18px, $color-tabs);
   display: inline-flex;
   min-height: 22px;
   padding: 2px 8px 2px 20px;
-  font-family: $font-circular-book;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  color: #667085;
   border-radius: 50vh;
   position: relative;
   &::before {
     position: absolute;
     content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
+    @include circle(6px);
     left: 7px;
     top: calc(50% - 3px);
   }
   &.full-trip {
-    background-color: #eff8ff;
-    color: #175cd3;
+    background-color: $bg-full-trip;
+    color: $color-full-trip;
     &::before {
-      background-color: #2e90fa;
+      background-color: $bg-dot-full-trip;
     }
   }
   &.free {
-    background-color: #fdf2fa;
-    color: #c11574;
+    background-color: $bg-free;
+    color: $color-free;
     &::before {
-      background-color: #ee46bc;
+      background-color: $bg-dot-free;
     }
   }
   &.monthly {
-    background-color: #ecfdf3;
-    color: #027a48;
+    background-color: $bg-success;
+    color: $color-success;
     &::before {
-      background-color: #12b76a;
+      background-color: $bg-dot-monthly;
     }
   }
 }
