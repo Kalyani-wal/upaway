@@ -1,8 +1,9 @@
 import React from "react";
+import { Progress } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import ProfileAvatar from "../../assets/images/profile-avatar.jpeg";
-import { Progress } from "reactstrap";
+import Zap from '../../assets/images/icon-zap.png';
 
 const Profile = () => {
   return (
@@ -17,7 +18,7 @@ const Profile = () => {
         <h3>My reviews</h3>
         <div className="section-progress-bar">
           <div className="icon-holder">
-          I
+          <img src={Zap} alt="Zap" />
           </div>
           <div className="container-progress-bar">
             <div className="section-top">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Layout from "../../../common/components/layout/layout";
 
 const RegistrationSuccess = () => {
@@ -9,7 +10,7 @@ const RegistrationSuccess = () => {
           Great! <br />
           Glad to have you here.
         </h2>
-        <button className="button button-login">Login</button>
+        <Link className="button button-login" to="/login">Login</Link>
       </div>
     </Layout>
   );

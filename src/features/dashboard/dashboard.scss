@@ -228,6 +228,9 @@
         @include flex(center, center);
         @include circle(40px);
         background-color: $color-primary;
+        img {
+          width: 17px;
+        }
       }
       .container-progress-bar {
         flex-grow: 1;

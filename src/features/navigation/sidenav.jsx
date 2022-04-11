@@ -12,7 +12,7 @@ const SideNav = () => {
         </a>
         <Nav className="main-nav">
           <NavItem>
-            <NavLink href="/" active>
+            <NavLink href="/dashboard" active>
               <div>
                 <svg
                   width="14"
@@ -56,7 +56,7 @@ const SideNav = () => {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/">
+            <NavLink href="/notifications">
               <div>
                 <svg
                   width="15"

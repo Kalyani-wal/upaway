@@ -64,7 +64,7 @@ ul {
   margin: 0 !important;
 }
 
-.button {
+.button, a.button {
   @include font-circular-reg(16px, 24px, $white);
   @include flex(center, center);
   width: 325px;
@@ -74,14 +74,22 @@ ul {
   outline: none;
   border-radius: 10px;
   cursor: pointer;
+  text-decoration: none;
+  &:hover, &:focus {
+    color: $white;
+  }
 }
 
-.button-link {
+.button-link, a.button-link {
   padding: 0;
   border: none;
   cursor: pointer;
   color: $color-primary;
   background: transparent;
+  text-decoration: none;
+  &:hover, &:focus {
+    color: $color-primary;
+  }
 }
 
 .container-table {
@@ -140,14 +148,14 @@ ul {
       }
     }
     tbody {
-      &::-webkit-scrollbar {
-        width: 7px;
-        background-color: $white;
-      }
-      &::-webkit-scrollbar-thumb {
-        background-color: $color-border;
-        border-radius: 50vh;
-      }
+      // &::-webkit-scrollbar {
+      //   width: 7px;
+      //   background-color: $white;
+      // }
+      // &::-webkit-scrollbar-thumb {
+      //   background-color: $color-border;
+      //   border-radius: 50vh;
+      // }
       td {
         padding-left: 6px;
         &:first-child {

@@ -1,16 +1,11 @@
 import React from "react";
 import Layout from "../../../common/components/layout/layout";
-import LogoSplash from '../../../assets/images/logo-spalsh.svg';
-
-import Registration from '../registration/registration';
-import Login from '../login/login';
+import LogoSplash from "../../../assets/images/logo-spalsh.svg";
 
 const Splash = () => {
   return (
     <Layout>
-       {/* <img src={LogoSplash} alt="Upaway" /> */}
-      {/* <Registration /> */}
-      <Login />
+      <img src={LogoSplash} alt="Upaway" />
     </Layout>
   );
 };
