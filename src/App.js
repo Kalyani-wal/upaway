@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
   Routes,
   Switch,
   Route,
@@ -18,19 +17,15 @@ import "./app.scss";
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Registration />} />
-          <Route path="/splash" element={<Splash />} />
-          <Route path="/login" element={<Login />} />
-          <Route
-            path="/registration-success"
-            element={<RegistrationSuccess />}
-          />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/notifications" element={<Notifications />} />
-        </Routes>
-      </Router>
+      {/* <Dashboard /> */}
+      <Routes>
+        <Route path="/" element={<Registration />} />
+        <Route path="/splash" element={<Splash />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/registration-success" element={<RegistrationSuccess />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/notifications" element={<Notifications />} />
+      </Routes>
     </div>
   );
 }

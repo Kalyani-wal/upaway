@@ -23,6 +23,7 @@ const Registration = () => {
               label="Confirm Password"
               type="password"
             />
+            {/* <button className="button button-register">Register account</button> */}
             <Link to="/registration-success" className="button button-register">
               Register account
             </Link>
@@ -30,6 +31,7 @@ const Registration = () => {
         </Formik>
         <div className="login-text">
           Already have an account?{" "}
+          {/* <button className="button-link">Log in</button> */}
           <Link className="button-link" to="/login">Log in</Link>
         </div>
       </div>

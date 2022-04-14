@@ -1,5 +1,6 @@
 import React from "react";
 import { Nav, NavItem, NavLink } from "reactstrap";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.svg";
 import Avatar from "../../assets/images/avatar.png";
 
@@ -112,7 +113,7 @@ const SideNav = () => {
               <span>olivia@email.com</span>
             </div>
           </div>
-          <button className="button-link button-logout">
+          <Link to="/login" className="button-link button-logout">
             <svg
               width="18"
               height="18"
@@ -128,7 +129,7 @@ const SideNav = () => {
                 stroke-linejoin="round"
               />
             </svg>
-          </button>
+          </Link>
         </div>
       </div>
     </div>
