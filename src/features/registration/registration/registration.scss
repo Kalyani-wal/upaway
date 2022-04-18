@@ -17,6 +17,7 @@
   }
   .title {
     margin-bottom: 45px;
+    text-transform: none;
   }
   form {
     @include flex-d(flex-start, center, column);

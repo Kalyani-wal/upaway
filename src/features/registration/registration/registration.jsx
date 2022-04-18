@@ -16,7 +16,7 @@ const Registration = () => {
             <Input placeholder="Your Email" label="Email" type="email" />
             <div className="passowrd-container">
               <Input placeholder="Password" label="Password" type="password" />
-              <span className="password-length">Password strenght: Strong</span>
+              <span className="password-length">Password strength: Strong</span>
             </div>
             <Input
               placeholder="Password"

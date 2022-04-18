@@ -11,7 +11,7 @@ const Login = () => {
     <Layout>
       <div className="registration-container login-container">
         <img src={Logo} alt="Upaway" className="logo" />
-        <h2 className="title">Trip Support Dashboard</h2>
+        <h2 className="title">Login to your account</h2>
         <Formik>
           <Form>
             <Input placeholder="Enter Email" label="Email" type="email" />
