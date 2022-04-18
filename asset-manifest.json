@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/upaway/static/css/main.37e9b789.css",
-    "main.js": "/upaway/static/js/main.f53c6a71.js",
+    "main.css": "/upaway/static/css/main.275ce474.css",
+    "main.js": "/upaway/static/js/main.3a17ded4.js",
     "static/media/bg-landing-left-bottom-success.png": "/upaway/static/media/bg-landing-left-bottom-success.3e5880c5bbd8cea7b441.png",
     "static/media/bg-landing-right-up.png": "/upaway/static/media/bg-landing-right-up.71d2c0c3784f3ce585f6.png",
     "static/media/bg-landing-left-bottom.png": "/upaway/static/media/bg-landing-left-bottom.92c1372c88dc8a1aaebf.png",
     "static/media/CircularStd-Bold.otf": "/upaway/static/media/CircularStd-Bold.e14227748fec7e7df70a.otf",
     "static/media/CircularStd-Medium.otf": "/upaway/static/media/CircularStd-Medium.61a1467267209fdd98dd.otf",
     "static/media/CircularStd-Book.otf": "/upaway/static/media/CircularStd-Book.41d2c3bd12c9e939292f.otf",
+    "static/media/location.png": "/upaway/static/media/location.dbae6bed3a032be04b87.png",
     "static/media/logo-spalsh.svg": "/upaway/static/media/logo-spalsh.29a6ff6332330dedd464200c68f603da.svg",
     "static/media/logo.svg": "/upaway/static/media/logo.355c70df8164b88c5ef84ae96081dfe2.svg",
     "static/media/eye.svg": "/upaway/static/media/eye.e864207a2989993bbb89273b5ca65e99.svg",
     "index.html": "/upaway/index.html",
-    "main.37e9b789.css.map": "/upaway/static/css/main.37e9b789.css.map",
-    "main.f53c6a71.js.map": "/upaway/static/js/main.f53c6a71.js.map"
+    "main.275ce474.css.map": "/upaway/static/css/main.275ce474.css.map",
+    "main.3a17ded4.js.map": "/upaway/static/js/main.3a17ded4.js.map"
   },
   "entrypoints": [
-    "static/css/main.37e9b789.css",
-    "static/js/main.f53c6a71.js"
+    "static/css/main.275ce474.css",
+    "static/js/main.3a17ded4.js"
   ]
 }
