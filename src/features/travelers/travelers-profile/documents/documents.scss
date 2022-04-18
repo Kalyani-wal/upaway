@@ -2,7 +2,13 @@
   .title-search-bar-container {
     justify-content: flex-end;
   }
+  .wrapper-documents {
+    margin-top: -45px;
+  }
   .section-documents {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
     > h3.title {
       @include font-circular-reg(18px, 23px, $black);
       margin-bottom: 30px;

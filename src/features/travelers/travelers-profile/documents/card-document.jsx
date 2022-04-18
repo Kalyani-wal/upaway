@@ -15,7 +15,7 @@ const CardDocument = ({ docName, docId, expiryDate, expire, docLink }) => {
         {expire && <div className="user-type documents">Expiry soon</div>}
       </div>
       <div className="section-view">
-        <a href={docLink} target="_blank" className="button-link">
+        <a href={docLink} target="_blank" rel="noreferrer" className="button-link">
           View
         </a>
       </div>

@@ -2,12 +2,12 @@
   @include flex-d(flex-start, center, column);
   background-color: $white;
   width: 600px;
-  padding: 85px 100px 40px;
+  padding: 85px 40px 40px;
   border-radius: 20px;
   max-height: 95vh;
   overflow-y: auto;
   @media (max-height: 1000px) {
-    padding: 75px 100px 40px;
+    padding: 75px 40px 40px;
   }
   .logo {
     display: block;
@@ -22,6 +22,9 @@
       margin-bottom: 30px;
       &:nth-last-of-type(1) {
         margin-bottom: 45px;
+      }
+      input {
+        max-width: 400px;
       }
     }
     .passowrd-container {

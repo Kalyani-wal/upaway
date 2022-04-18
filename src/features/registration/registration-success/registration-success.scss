@@ -1,6 +1,7 @@
 .layout-wrapper.layout-wrapper-success {
   background: $color-primary url('../../../assets/images/bg-landing-right-up-success.png') no-repeat right top;
   background-size: 300px 158px;
+  overflow: hidden;
   &:before {
     position: absolute;
     content: "";

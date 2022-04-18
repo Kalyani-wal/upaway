@@ -22,6 +22,30 @@ const Documents = () => {
             />
           </div>
         </div>
+        <div className="section-documents">
+          <h3 className="title">Andrew Carter</h3>
+          <div className="container-documents">
+            <CardDocument 
+              docName="Vaccination Certificate" 
+              docId="6779 9985" 
+              expiryDate="02/21/2024" 
+              expire
+              docLink="^_^"
+            />
+          </div>
+        </div>
+        <div className="section-documents">
+          <h3 className="title">Andrew Carter</h3>
+          <div className="container-documents">
+            <CardDocument 
+              docName="Vaccination Certificate" 
+              docId="6779 9985" 
+              expiryDate="02/21/2024" 
+              expire
+              docLink="^_^"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
