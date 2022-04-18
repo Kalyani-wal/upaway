@@ -1,0 +1,54 @@
+.wrapper-page-layout-travelers {
+  .container-activities {
+    .table.table-travelers {
+      tbody {
+        max-height: calc(
+          100vh - 100px - 40px - 51px - 55px - 28px - 25px - 45px - 40px - 20px
+        );
+        overflow-y: auto;
+        @media (max-height: 1000px) {
+          max-height: calc(
+            100vh - 25px - 25px - 51px - 35px - 28px - 25px - 45px - 40px - 20px
+          );
+        }
+      }
+      td,
+      th {
+        width: calc((100% - 430px) / 4);
+        &:nth-last-child(1) {
+          width: 80px;
+          a {
+            padding: 5px;
+            img {
+              width: 12px;
+            }
+          }
+        }
+        &:nth-last-child(2) {
+          width: 200px;
+        }
+        &:nth-last-child(3) {
+          width: 150px;
+        }
+        @media (max-width: 1300px) {
+          width: calc((100% - 350px) / 4);
+          &:nth-last-child(1) {
+            width: 60px;
+          }
+          &:nth-last-child(2) {
+            width: 170px;
+          }
+          &:nth-last-child(3) {
+            width: 120px;
+          }
+        }
+      }
+      td {
+        color: $color-header-secondary;
+        &:first-child {
+          color: $color-tabs;
+        }
+      }
+    }
+  }
+}

@@ -35,7 +35,7 @@ const SideNav = () => {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/">
+            <NavLink href="/travelers">
               <div>
                 <svg
                   width="24"

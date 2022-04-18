@@ -142,8 +142,7 @@ ul {
         }
       }
       th {
-        font-size: 12px;
-        line-height: 18px;
+        @include font-circular-reg(12px, 18px, $color-tabs);
         min-height: 44px;
       }
     }
@@ -209,6 +208,13 @@ ul {
     color: $color-success;
     &::before {
       background-color: $bg-dot-monthly;
+    }
+  }
+  &.documents {
+    background-color: $bg-primary;
+    color: $color-orange-secondary;
+    &::before {
+      background-color: $color-primary;
     }
   }
 }

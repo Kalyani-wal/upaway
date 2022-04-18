@@ -1,22 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SideNav from '../../../features/navigation/sidenav';
-// import { Breadcrumbs } from "../index";
+import SideNav from "../../../features/navigation/sidenav";
+import Breadcrumbs from "../breadcrumb/Breadcrumb";
 import cx from "classnames";
 
 const PageLayout = (props) => {
-  const {
-    children,
-    className,
-    headerText,
-    crumbMapping,
-  } = props;
+  const { children, className, headerText, breadcrumbs } = props;
   return (
     <div className={cx(className, "wrapper-page-layout")}>
-      <div className="layout-left-section"><SideNav /></div>
+      <div className="layout-left-section">
+        <SideNav />
+      </div>
       <section className="layout-page-section">
         <div className="page-header">
-          {/* <Breadcrumbs crumbMapping={crumbMapping} /> */}
+          {breadcrumbs && <Breadcrumbs />}
           <h1>{headerText}</h1>
         </div>
         <div className="page-body">{children}</div>
@@ -29,22 +26,14 @@ PageLayout.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   headerText: PropTypes.string,
-  crumbMapping: PropTypes.arrayOf(PropTypes.object),
-  subHeaderText: PropTypes.string,
-  renderRightContent: PropTypes.func,
-  renderHeader: PropTypes.func,
-  cardAfterBreadCrumb: PropTypes.arrayOf(PropTypes.object),
+  breadcrumbs: PropTypes.bool,
 };
 
 PageLayout.defaultProps = {
   children: null,
   className: "",
   headerText: "",
-  crumbMapping: [],
-  subHeaderText: "",
-  renderRightContent: () => {},
-  renderHeader: null,
-  cardAfterBreadCrumb: [],
+  breadcrumbs: false
 };
 
 export default PageLayout;

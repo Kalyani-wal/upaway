@@ -1,0 +1,33 @@
+.container-payment-details {
+  .container-details {
+    margin-bottom: 35px;
+    .personal-details {
+      margin-bottom: 0;
+    }
+  }
+  .table.table-payment-details {
+    tbody {
+      max-height: calc(
+        100vh - 60px - 40px - 87px - 50px - 49px - 30px - 231px - 35px - 38px -
+          15px - 45px - 40px - 20px
+      );
+      overflow-y: auto;
+      @media (max-height: 1000px) {
+        max-height: calc(
+        100vh - 60px - 25px - 87px - 50px - 49px - 30px - 231px - 35px - 38px -
+          15px - 45px - 40px - 20px
+      );
+      }
+    }
+    td,
+    th {
+      width: 25%;
+    }
+    td {
+      color: $color-header-secondary;
+      &:first-child {
+        color: $color-tabs;
+      }
+    }
+  }
+}

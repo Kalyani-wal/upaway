@@ -1,0 +1,9 @@
+.card-detail {
+  display: flex;
+  .card-name {
+    @include font-circular-reg(13px, 16px, $color-theme);
+  }
+  .card-value {
+    @include font-circular-reg(13px, 16px, $color-header);
+  }
+}

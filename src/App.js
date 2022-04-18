@@ -1,9 +1,7 @@
 import React from "react";
 import {
   Routes,
-  Switch,
-  Route,
-  Redirect,
+  Route
 } from "react-router-dom";
 import Splash from "./features/registration/splash/splash";
 import Registration from "./features/registration/registration/registration";
@@ -11,6 +9,8 @@ import Login from "./features/registration/login/login";
 import RegistrationSuccess from "./features/registration/registration-success/registrationSuccess";
 import Dashboard from "./features/dashboard";
 import Notifications from "./features/notifications/notifications";
+import TravelersActivities from './features/travelers/travelers-activities/travelers-activities';
+import TravelersProfile from './features/travelers/travelers-profile';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./app.scss";
 
@@ -24,6 +24,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registration-success" element={<RegistrationSuccess />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/travelers" element={<TravelersActivities />}></Route>
+        <Route path="/travelers/1/profile" element={<TravelersProfile />}></Route>
         <Route path="/notifications" element={<Notifications />} />
       </Routes>
     </div>

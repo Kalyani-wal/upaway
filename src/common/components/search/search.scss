@@ -1,0 +1,29 @@
+.common-search {
+  width: 500px;
+  .local-search {
+    @include font-circular-reg(12px, 16px, $color-header-secondary);
+    width: 100%;
+    height: 38px;
+    background: $white;
+    border-radius: 8px;
+    border: 1px solid $white;
+    outline: none;
+    padding: 5px 32px;
+    text-transform: capitalize;
+    &::placeholder {
+      color: #a4b5b9;
+    }
+    &::-webkit-search-cancel-button {
+      @include circle(20px);
+      background: #e8edee url(../../../assets/images/icon-clear.png) no-repeat center;
+      background-size: 7px;
+      -webkit-appearance: none;
+      cursor: pointer;
+      position: relative;
+      left: 20px;
+    }
+    &:focus {
+      border-color: $color-primary;
+    }
+  }
+}

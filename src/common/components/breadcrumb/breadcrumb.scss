@@ -1,0 +1,16 @@
+.breadcrumbs {
+  .breadcrumb {
+    margin: 0 0 12px;
+    padding: 0;
+  }
+  .breadcrumb-item {
+    @include font-circular-reg(16px, 24px, $black);
+    a {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+  span.separator {
+    padding: 0 6px;
+  }
+}

@@ -1,0 +1,59 @@
+.container-details {
+  padding: 20px 50px 35px 65px;
+  background-color: $white;
+  box-shadow: 0px 3.2px 16px rgba($black, 0.02);
+  border-radius: 8px;
+  max-height: calc(100vh - 60px - 40px - 87px - 50px - 49px - 30px);
+  overflow-y: auto;
+  @media (max-height: 1000px) {
+    max-height: calc(100vh - 60px - 25px - 87px - 50px - 49px - 30px);
+  }
+  h3.title {
+    @include font-circular-reg(16px, 20px, $color-theme);
+    margin-bottom: 16px;
+  }
+  .personal-details {
+    margin-bottom: 65px;
+    .card-detail {
+      margin-bottom: 12px;
+      .card-name {
+        width: 40%;
+        max-width: 380px;
+        padding-right: 50px;
+      }
+      .team-inner {
+        > div {
+          @include flex(flex-start, center);
+          margin-bottom: 10px;
+          span {
+            display: inline-block;
+            width: 120px;
+            padding-right: 15px;
+          }
+        }
+      }
+    }
+  }
+  .credit-details {
+    @include flex(space-between, center);
+    .card-detail {
+      flex-grow: 1;
+      .card-name {
+        width: 50%;
+        max-width: 400px;
+      }
+      .card-value {
+        color: $color-theme;
+      }
+    }
+    .button.button-credits {
+      font-size: 14px;
+      width: 140px;
+      height: 36px;
+      svg {
+        width: 12px;
+        margin-left: 12px;
+      }
+    }
+  }
+}

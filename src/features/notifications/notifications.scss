@@ -1,10 +1,16 @@
 .wrapper-page-layout-notifications.wrapper-page-layout {
   .layout-page-section .page-header > h1 {
     margin-bottom: 55px;
+    @media (max-height: 1000px) {
+      margin-bottom: 35px;
+    }
   }
   .container-notifications {
     max-height: calc(100vh - 100px - 40px - 51px - 55px);
     overflow-y: auto;
+    @media (max-height: 1000px) {
+      max-height: calc(100vh - 25px - 25px - 51px - 35px);
+    }
   }
   .notifications-card {
     @include flex(flex-start, center);

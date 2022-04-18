@@ -1,0 +1,118 @@
+.container-trip-plans {
+  .title-search-bar-container {
+    @include flex(space-between, center);
+    margin-bottom: 15px;
+    h3.title {
+      @include font-circular-reg(18px, 28px, $color-header-secondary);
+    }
+    .section-filter-search-bar {
+      @include flex(flex-start, center);
+    }
+  }
+  .container-trip-details {
+    max-height: calc(
+      100vh - 60px - 40px - 87px - 50px - 49px - 30px - 38px - 15px
+    );
+    overflow-y: auto;
+    @media (max-height: 1000px) {
+      max-height: calc(
+        100vh - 60px - 25px - 87px - 50px - 49px - 30px - 38px - 15px
+      );
+    }
+    .container-trip {
+      background-color: $white;
+      border-radius: 10px;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      strong {
+        font-family: $font-circular-bold;
+        font-size: 16px;
+        color: $color-theme;
+      }
+      .section-header {
+        @include flex(flex-start, center);
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba($black, 0.1);
+        img {
+          width: 72px;
+          border-radius: 10px;
+        }
+        .section-trip-duration {
+          display: flex;
+          flex-direction: column;
+          margin-left: 12px;
+          strong {
+            line-height: 24px;
+          }
+          span {
+            @include font-circular-reg(14px, 24px, $color-theme);
+          }
+        }
+      }
+      .section-confirmations {
+        padding: 20px 20px 45px 30px;
+        .time-or-gap {
+          @include font-circular-reg(16px, 20px, $color-theme);
+          min-width: 140px;
+          padding-right: 10px;
+        }
+        .section-confirmation {
+          display: flex;
+          &:not(:last-child) {
+            margin-bottom: 25px;
+          }
+          .box-details {
+            @include flex(space-between, center);
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            padding: 10px 25px 5px 20px;
+            text-decoration: none;
+            flex-grow: 1;
+            > img {
+              width: 12px;
+            }
+            .section-details {
+              display: flex;
+              flex-direction: column;
+              padding-right: 20px;
+              strong,
+              span {
+                padding-bottom: 5px;
+              }
+              strong {
+                line-height: 20px;
+              }
+              span {
+                @include font-circular-reg(12px, 15px, $color-theme);
+              }
+              .airline-info {
+                @include flex(flex-start, center);
+                margin-bottom: 5px;
+                img {
+                  width: 15px;
+                }
+                strong {
+                  padding-left: 20px;
+                  padding-bottom: 0;
+                }
+              }
+            }
+          }
+        }
+        .section-trip-gap {
+          .box-missing-info {
+            min-height: 58px;
+            padding: 20px 25px;
+            background-color: #d2d5ed;
+            border-radius: 10px;
+            flex-grow: 1;
+            span {
+              @include font-circular-reg(16px, 20px, $black);
+            }
+          }
+        }
+      }
+    }
+  }
+}

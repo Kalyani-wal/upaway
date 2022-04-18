@@ -1,0 +1,57 @@
+@import "./trip-plans/trip-plans.scss";
+@import "./details/details.scss";
+@import "./payment-details/payment-details.scss";
+@import "./documents/documents.scss";
+@import "./card/card.scss";
+
+//Page Layout
+.wrapper-page-layout.wrapper-page-layout-travelers-profile {
+  .layout-page-section {
+    padding-top: 60px;
+    .page-header > h1 {
+      margin-bottom: 50px;
+    }
+    .page-body {
+      padding-left: 15px;
+      .container-profile-tabs {
+        .nav.nav-tabs {
+          border: none;
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            width: calc(100% + 15px + 40px + 40px);
+            height: 1px;
+            background-color: rgba($black, 0.05);
+            left: 55px;
+            bottom: -1px;
+            @media (max-height: 1000px) {
+              width: calc(100% + 15px + 20px + 20px);
+              left: -35px;
+            }
+          }
+          .nav-item {
+            width: 25%;
+            .nav-link {
+              @include flex(center, center);
+              @include font-circular-reg(16px, 24px, $color-tabs);
+              min-height: 50px;
+              border-radius: 0;
+              border: none;
+              border-bottom: 2px solid transparent;
+              cursor: pointer;
+              &.active {
+                color: $color-orange-secondary;
+                background-color: $bg-primary;
+                border-color: $color-orange-secondary;
+              }
+            }
+          }
+        }
+        .tab-content {
+          padding-top: 30px;
+        }
+      }
+    }
+  }
+}
