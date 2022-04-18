@@ -4,6 +4,10 @@
     .personal-details {
       margin-bottom: 0;
     }
+    @media (max-height: 1000px) {
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+    }
   }
   .table.table-payment-details {
     tbody {
@@ -14,9 +18,9 @@
       overflow-y: auto;
       @media (max-height: 1000px) {
         max-height: calc(
-        100vh - 60px - 25px - 87px - 50px - 49px - 30px - 231px - 35px - 38px -
-          15px - 45px - 40px - 20px
-      );
+          100vh - 25px - 25px - 87px - 25px - 49px - 30px - 204px - 25px - 38px -
+            15px - 45px - 40px - 20px
+        );
       }
     }
     td,

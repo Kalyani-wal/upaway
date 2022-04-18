@@ -30,4 +30,16 @@
       background-color: $color-yellow-secondary;
     }
   }
+  @media (max-height: 1000px) {
+    background-position: right 0 top 80px;
+    &:after {
+      bottom: 70px;
+    }
+    .layout-content {
+      background-position: left 0 bottom 140px;
+      &::before {
+        top: 80px;
+      }
+    }
+  }
 }

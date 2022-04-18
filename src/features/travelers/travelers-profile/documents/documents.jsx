@@ -20,11 +20,6 @@ const Documents = () => {
               expire
               docLink="^_^"
             />
-          </div>
-        </div>
-        <div className="section-documents">
-          <h3 className="title">Andrew Carter</h3>
-          <div className="container-documents">
             <CardDocument 
               docName="Vaccination Certificate" 
               docId="6779 9985" 
@@ -37,6 +32,39 @@ const Documents = () => {
         <div className="section-documents">
           <h3 className="title">Andrew Carter</h3>
           <div className="container-documents">
+            <CardDocument 
+              docName="Vaccination Certificate" 
+              docId="6779 9985" 
+              expiryDate="02/21/2024" 
+              expire
+              docLink="^_^"
+            />
+            <CardDocument 
+              docName="Vaccination Certificate" 
+              docId="6779 9985" 
+              expiryDate="02/21/2024" 
+              expire
+              docLink="^_^"
+            />
+            <CardDocument 
+              docName="Vaccination Certificate" 
+              docId="6779 9985" 
+              expiryDate="02/21/2024" 
+              
+              docLink="^_^"
+            />
+          </div>
+        </div>
+        <div className="section-documents">
+          <h3 className="title">Andrew Carter</h3>
+          <div className="container-documents">
+            <CardDocument 
+              docName="Vaccination Certificate" 
+              docId="6779 9985" 
+              expiryDate="02/21/2024" 
+              expire
+              docLink="^_^"
+            />
             <CardDocument 
               docName="Vaccination Certificate" 
               docId="6779 9985" 

@@ -1,9 +1,19 @@
 .container-documents {
   .title-search-bar-container {
     justify-content: flex-end;
+    position: relative;
+    z-index: 1;
   }
   .wrapper-documents {
-    margin-top: -45px;
+    max-height: calc(
+      100vh - 60px - 40px - 87px - 50px - 49px - 30px - 38px - 15px
+    );
+    overflow-y: auto;
+    @media (max-height: 1000px) {
+      max-height: calc(
+        100vh - 25px - 25px - 87px - 25px - 49px - 30px - 38px - 15px
+      );
+    }
   }
   .section-documents {
     &:not(:last-child) {
@@ -19,7 +29,8 @@
       gap: 24px;
       .card-document {
         background-color: $white;
-        box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+        box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1),
+          0px 1px 2px rgba(16, 24, 40, 0.06);
         border-radius: 8px;
         padding: 24px 24px 0;
         min-width: 330px;
@@ -29,7 +40,7 @@
           > span {
             @include flex(center, center);
             @include circle(48px);
-            background-color: #C4C4C4;
+            background-color: #c4c4c4;
             margin-right: 12px;
           }
           > div {
