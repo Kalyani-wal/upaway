@@ -58,7 +58,8 @@
         .number {
           @include font-circular-reg(36px, 40px, $color-header-secondary);
           margin-bottom: 15px;
-          display: block;
+          display: flex;
+          align-items: center;
           > svg {
             width: 28px;
             color: $color-yellow;
@@ -67,12 +68,14 @@
         }
         .percentage {
           @include font-circular-reg(14px, 20px, $color-tabs);
+          display: flex;
+          align-items: center;
           img {
             width: 12px;
           }
           span {
             color: $color-error;
-            margin-left: 6px;
+            margin: 0 6px;
           }
           &.percentage-rise {
             span {
