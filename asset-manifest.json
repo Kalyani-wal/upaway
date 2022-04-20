@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/upaway/static/css/main.134b1cc3.css",
+    "main.css": "/upaway/static/css/main.7c7636c1.css",
     "main.js": "/upaway/static/js/main.22b60787.js",
     "static/media/bg-landing-left-bottom-success.png": "/upaway/static/media/bg-landing-left-bottom-success.3e5880c5bbd8cea7b441.png",
     "static/media/bg-landing-right-up.png": "/upaway/static/media/bg-landing-right-up.71d2c0c3784f3ce585f6.png",
@@ -13,11 +13,11 @@
     "static/media/logo.svg": "/upaway/static/media/logo.355c70df8164b88c5ef84ae96081dfe2.svg",
     "static/media/eye.svg": "/upaway/static/media/eye.e864207a2989993bbb89273b5ca65e99.svg",
     "index.html": "/upaway/index.html",
-    "main.134b1cc3.css.map": "/upaway/static/css/main.134b1cc3.css.map",
+    "main.7c7636c1.css.map": "/upaway/static/css/main.7c7636c1.css.map",
     "main.22b60787.js.map": "/upaway/static/js/main.22b60787.js.map"
   },
   "entrypoints": [
-    "static/css/main.134b1cc3.css",
+    "static/css/main.7c7636c1.css",
     "static/js/main.22b60787.js"
   ]
 }
