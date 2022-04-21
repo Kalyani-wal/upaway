@@ -3,6 +3,11 @@
     justify-content: flex-end;
     position: relative;
     z-index: 1;
+    .wrapper-filters {
+      .common-search {
+        width: 500px;
+      }
+    }
   }
   .wrapper-documents {
     max-height: calc(

@@ -1,5 +1,6 @@
 @import "./trip-plans/trip-plans.scss";
 @import "./details/details.scss";
+@import "./details/travel-credits.scss";
 @import "./payment-details/payment-details.scss";
 @import "./documents/documents.scss";
 @import "./card/card.scss";
@@ -20,7 +21,7 @@
     .page-body {
       padding-left: 15px;
       .container-profile-tabs {
-        .nav.nav-tabs {
+        .nav.nav-tabs.tabs-profiles {
           border: none;
           position: relative;
           &::after {

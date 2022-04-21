@@ -2,10 +2,12 @@ import React from "react";
 import Card from "../card/card";
 import Search from "../../../../common/components/search/Search";
 import Pagination from '../../../../common/components/pagination/pagination';
+import Calendar from "../../../../common/components/calendar/calendar";
+import Filters from "../../../../common/components/filters/filters";
 
 const PaymentDetails = () => {
   return (
-    <div className="container-trip-plans container-payment-details">
+    <div className="container-activities container-trip-plans container-payment-details">
       <div className="container-details">
         <h3 className="title">Credit Card</h3>
         <div className="personal-details">
@@ -16,10 +18,12 @@ const PaymentDetails = () => {
           <Card name="CVV" value="776" />
         </div>
       </div>
-      <div className="title-search-bar-container">
+      <div className="section-title-filters title-search-bar-container">
         <h3 className="title">Last Transaction</h3>
-        <div className="section-filter-search-bar">
+        <div className="wrapper-filters">
           <Search />
+          <Calendar />
+          <Filters />
         </div>
       </div>
       <div className="container-table">

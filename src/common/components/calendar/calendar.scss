@@ -1,0 +1,228 @@
+.container-filters.container-calendar {
+  .dropdown {
+    .dropdown-menu {
+      width: auto;
+      max-height: none;
+      padding: 0;
+      position: relative;
+      .calendar-wrapper {
+        position: relative;
+        .container-buttons {
+          display: flex;
+          gap: 12px;
+          position: absolute;
+          bottom: 16px;
+          right: 24px;
+        }
+      }
+    }
+  }
+  .rdrDateRangePickerWrapper {
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08),
+      0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+    border-radius: 8px;
+    border: 1px solid #f2f4f7;
+    background-color: $white;
+    * {
+      font-family: $font-circular-book;
+      font-weight: 400;
+    }
+    .rdrCalendarWrapper {
+      padding-bottom: 72px;
+      .rdrDateDisplayWrapper {
+        position: absolute;
+        bottom: 16px;
+        left: 24px;
+        background-color: transparent;
+        .rdrDateDisplay {
+          margin: 0;
+          .rdrDateDisplayItem {
+            height: 40px;
+            min-width: 128px;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 8px;
+            border-color: $color-border-secondary;
+            background-color: $white;
+            input {
+              @include font-circular-reg(16px, 24px, $color-header-secondary);
+              height: 100%;
+            }
+            &:first-child {
+              margin-right: 35px;
+              position: relative;
+              &::after {
+                position: absolute;
+                content: "";
+                width: 8px;
+                height: 2px;
+                background-color: $color-tabs;
+                right: -27px;
+                top: 19px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .rdrDefinedRangesWrapper,
+    .rdrMonthAndYearPickers {
+      display: none;
+    }
+    .rdrMonthAndYearWrapper {
+      padding-top: 25px;
+      height: unset;
+      position: relative;
+      button.rdrNextPrevButton {
+        i {
+          display: none;
+        }
+        &.rdrPprevButton {
+          background: url(../../../assets/images/icon-left-chevron.png)
+            no-repeat 10px 7px;
+          background-size: 5px 10px;
+        }
+        &.rdrNextButton {
+          background: url(../../../assets/images/icon-right-chevron.png)
+            no-repeat 10px 7px;
+          background-size: 5px 10px;
+        }
+      }
+    }
+    .rdrMonths {
+      margin-top: -25px;
+      border-bottom: 1px solid $color-border;
+      .rdrMonth {
+        &:first-child {
+          border-right: 1px solid $color-border;
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 25px;
+            top: -25px;
+            right: -1px;
+            background-color: $color-border;
+          }
+        }
+        .rdrMonthName {
+          font-size: 16px;
+          line-height: 24px;
+          color: $color-nav-item;
+          text-align: center;
+          padding: 0;
+          margin-bottom: 30px;
+        }
+        .rdrWeekDays {
+          margin-bottom: 14px;
+          .rdrWeekDay {
+            font-size: 14px;
+            line-height: 20px;
+            color: $color-nav-item;
+          }
+        }
+        .rdrDays {
+          gap: 5px;
+          .rdrDayStartPreview {
+            display: none;
+          }
+          .rdrDay {
+            @include circle(40px);
+            line-height: normal;
+            .rdrDayInPreview, .rdrDayEndPreview {
+              color: transparent !important;
+            }
+            .rdrDayNumber {
+              font-size: 14px;
+              line-height: 20px;
+              color: $color-tabs;
+              span {
+                color: $color-tabs;
+                &:after {
+                  display: none;
+                }
+              }
+            }
+            .rdrInRange,
+            .rdrStartEdge,
+            .rdrEndEdge {
+              color: #fa966b !important;
+              height: 100%;
+              width: 100%;
+              top: 0;
+              left: 0;
+            }
+            .rdrStartEdge,
+            .rdrEndEdge {
+              + .rdrDayNumber, + span + .rdrDayNumber {
+                span {
+                  color: #fff;
+                }
+              }
+            }
+            .rdrStartEdge {
+              border-top-left-radius: 20px;
+              border-bottom-left-radius: 20px;
+            }
+            .rdrEndEdge {
+              border-top-right-radius: 20px;
+              border-bottom-right-radius: 20px;
+            }
+            .rdrEndEdge:not(.rdrStartEdge) {
+              &::before {
+                position: absolute;
+                content: "";
+                width: 5px;
+                height: 100%;
+                left: -5px;
+                top: 0;
+                background-color: #feeae1;
+              }
+            }
+            .rdrInRange {
+              color: #feeae1 !important;
+              width: calc(100% + 5px);
+              left: -5px;
+              + .rdrDayNumber, + span + .rdrDayNumber {
+                span {
+                  color: #e18760;
+                }
+              }
+            }
+            &.rdrDayEndOfWeek {
+              .rdrInRange {
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+              }
+            }
+            &.rdrDayStartOfWeek {
+              .rdrInRange {
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+              }
+            }
+            &:hover {
+              background-color: #fee0d3;
+              .rdrDayNumber span {
+                color: $color-orange-secondary;
+              }
+              .rdrStartEdge,
+              .rdrEndEdge {
+                + .rdrDayNumber {
+                  span {
+                    color: #fff;
+                  }
+                }
+              }
+            }
+            &.rdrDayActive:hover {
+              .rdrDayNumber span {
+                color: $white !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

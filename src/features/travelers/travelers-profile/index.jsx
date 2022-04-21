@@ -25,7 +25,7 @@ const TravelersProfile = () => {
       breadcrumbs
     >
       <div className="container-profile-tabs">
-        <Nav tabs>
+        <Nav tabs className="tabs-profiles">
           <NavItem>
             <NavLink
               className={cx({ active: activeTab === "1" })}

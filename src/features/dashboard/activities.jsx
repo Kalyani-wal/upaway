@@ -1,12 +1,15 @@
 import React from "react";
-import Pagination from '../../common/components/pagination/pagination';
+import Calendar from "../../common/components/calendar/calendar";
+import Pagination from "../../common/components/pagination/pagination";
 
 const Activities = () => {
   return (
     <div className="container-activities">
       <div className="section-title-filters">
         <h3>Last Activities</h3>
-        {/* <div className="filters">Filters</div> */}
+        <div className="wrapper-filters wrapper-filters-dashboard">
+          <Calendar />
+        </div>
       </div>
       <div className="container-table">
         <table className="table table-dashboard">
@@ -19,7 +22,7 @@ const Activities = () => {
             </tr>
           </thead>
           <tbody>
-          <tr>
+            <tr>
               <td>22 Jan 2022</td>
               <td>
                 <div className="name-info">

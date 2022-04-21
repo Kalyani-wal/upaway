@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "../card/card";
+import TravelCredits from "./travel-credits";
 
 const Details = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="container-details">
       <h3 className="title">Customer Information</h3>
@@ -40,7 +42,11 @@ const Details = () => {
       </div>
       <div className="credit-details">
         <Card name="Travel Credit available" value="$ 455.00" />
-        <Link to="/" className="button button-credits">
+        <button
+          to="/"
+          className="button button-credits"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           See Credits
           <svg
             width="15"
@@ -54,8 +60,9 @@ const Details = () => {
               fill="white"
             />
           </svg>
-        </Link>
+        </button>
       </div>
+      <TravelCredits isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 };

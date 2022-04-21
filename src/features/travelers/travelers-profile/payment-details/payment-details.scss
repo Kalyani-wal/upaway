@@ -1,4 +1,20 @@
 .container-payment-details {
+  .container-filters.container-calendar,
+  .container-filters {
+    .dropdown .dropdown-menu {
+      max-height: calc(
+        100vh - 60px - 40px - 87px - 50px - 49px - 30px - 231px - 35px - 38px -
+          10px
+      );
+      overflow-y: auto;
+      @media (max-height: 1000px) {
+        max-height: calc(
+          100vh - 25px - 25px - 87px - 25px - 49px - 30px - 204px - 25px - 38px -
+            10px
+        );
+      }
+    }
+  }
   .container-details {
     margin-bottom: 35px;
     .personal-details {

@@ -1,9 +1,10 @@
 import React from "react";
 import PageLayout from "../../../common/components/layout/page-layout";
 import ArrowRight from "../../../assets/images/icon-right.png";
-import Pagination from '../../../common/components/pagination/pagination';
+import Pagination from "../../../common/components/pagination/pagination";
 import { Link } from "react-router-dom";
 import Search from "../../../common/components/search/Search";
+import Calendar from "../../../common/components/calendar/calendar";
 
 const TravelersActivities = () => {
   return (
@@ -14,9 +15,10 @@ const TravelersActivities = () => {
       <div className="container-activities">
         <div className="section-title-filters">
           <h3>Last Activities</h3>
-          <div className="filters">
-              <Search placeholder="Search Name, Location" searchText="asdhagd" />
-            </div>
+          <div className="wrapper-filters">
+            <Search placeholder="Search Name, Location" searchText="asdhagd" />
+            <Calendar />
+          </div>
         </div>
         <div className="container-table">
           <table className="table table-travelers">

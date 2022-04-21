@@ -1,0 +1,20 @@
+.panel-collapse {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh !important;
+  width: 375px !important;
+  background-color: $white;
+  &.collapse:not(.show) {
+    display: block;
+    right: -375px;
+    transition: right .35s ease;
+  }
+  &.collapse.show {
+    right: 0;
+  }
+}
+
+.collapsing {
+  transition: right .35s ease;
+}
