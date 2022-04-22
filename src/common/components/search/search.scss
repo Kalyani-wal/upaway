@@ -1,5 +1,6 @@
 .common-search {
   width: 500px;
+  position: relative;
   .local-search {
     @include font-circular-reg(12px, 16px, $color-header-secondary);
     width: 100%;
@@ -25,5 +26,14 @@
     &:focus {
       border-color: $color-primary;
     }
+  }
+  &.search-with-icon .local-search {
+    padding-left: 42px;
+  }
+  .icon-search {
+    width: 15px;
+    position: absolute;
+    top: 14.5px;
+    left: 16px;
   }
 }

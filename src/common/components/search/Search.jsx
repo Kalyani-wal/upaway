@@ -1,26 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import cx from "classnames";
+import IconSearch from "../../../assets/images/icon-search.png";
 
-const Search = props => {
+const Search = (props) => {
   const {
     searchText,
     placeholder,
     handleChange,
     handleTrigger,
     wrapperClassName,
+    searchIcon,
   } = props;
 
   return (
-    <div className={cx('common-search', wrapperClassName)}>
+    <div className={cx("common-search", wrapperClassName, {"search-with-icon" : IconSearch})}>
       <input
         className="local-search"
-        placeholder={placeholder || 'Search ...'}
+        placeholder={placeholder || "Search ..."}
         onChange={handleChange}
         // value={searchText}
         onKeyPress={handleTrigger}
         type="search"
       />
+      {searchIcon && <img src={IconSearch} alt="Search" className="icon-search" />}
     </div>
   );
 };
@@ -34,11 +37,11 @@ Search.propTypes = {
 };
 
 Search.defaultProps = {
-  searchText: '',
-  placeholder: '',
+  searchText: "",
+  placeholder: "",
   handleChange: () => {},
   handleTrigger: () => {},
-  wrapperClassName: '',
+  wrapperClassName: "",
 };
 
 export default Search;

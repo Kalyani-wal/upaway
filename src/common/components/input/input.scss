@@ -38,7 +38,7 @@
     }
 
     &::-webkit-credentials-auto-fill-button,
-    &::-webkit-contacts-auto-fill-button {
+    &::-webkit-contacts-auto-fill-button, &::-ms-reveal {
       visibility: hidden;
       display: none !important;
       pointer-events: none;

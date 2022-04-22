@@ -1,4 +1,12 @@
 .panel-travel-credits {
+  span.amount {
+    @include flex(center, center);
+    @include font-circular-reg(14px, 18px, $color-success);
+    min-width: 52px;
+    min-height: 22px;
+    background-color: $bg-success;
+    border-radius: 50vh;
+  }
   .section-header {
     @include flex(space-between, center);
     min-height: 64px;
@@ -7,8 +15,20 @@
     > h3 {
       @include font-circular-reg(24px, 32px, $color-header-secondary);
     }
-    img {
-      width: 12px;
+    span {
+      cursor: pointer;
+      img {
+        width: 12px;
+      }
+    }
+    &.section-header-details {
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 112px;
+      padding-top: 30px;
+      > span {
+        padding: 2px 0;
+      }
     }
   }
   .container-search {
@@ -24,35 +44,82 @@
       }
     }
   }
-  .table-travel-credits.table tr {
-    &:nth-child(even) {
-      background-color: $color-light-grey;
+  .table-travel-credits.table {
+    margin-bottom: 0;
+    tbody {
+      max-height: calc(100vh - 64px - 104px - 45px);
+      overflow-y: auto;
     }
-    th, td {
-      width: 30%;
-      &:nth-child(1) {
-        width: 45%;
+    tr {
+      &:nth-child(even) {
+        background-color: $color-light-grey;
       }
-      &:nth-child(2) {
-        width: 25%;
+      th,
+      td {
+        width: 30%;
+        &:nth-child(1) {
+          width: 45%;
+        }
+        &:nth-child(2) {
+          width: 25%;
+        }
+      }
+      th {
+        font-size: 14px;
+      }
+      td {
+        font-size: 16px;
+        &:first-child {
+          color: $color-header-secondary;
+        }
+        span:not(.amount) {
+          cursor: pointer;
+        }
       }
     }
-    th {
-      font-size: 14px;
-    }
-    td {
-      font-size: 16px;
-      &:first-child {
-        color: $color-header-secondary;
+  }
+  .section-details {
+    padding: 40px 16px 0 16px;
+    margin-bottom: 60px;
+    .wrapper-detail {
+      margin-bottom: 35px;
+      .card-title {
+        @include font-circular-reg(18px, 24px, $black);
+        display: block;
+        margin: 0;
+        padding: 0 0 8px 10px;
       }
-      .amount {
+      .card-value:not(.card-value-expiry) {
         @include flex(center, center);
-        @include font-circular-reg(14px, 18px, $color-success);
-        min-width: 52px;
-        min-height: 22px;
-        background-color: $bg-success;
-        border-radius: 50vh;
+        min-height: 89px;
+        background-color: $color-light-grey;
+        border: 1px solid rgba(121, 129, 147, 0.4);
+        border-radius: 10px;
+        padding: 10px 25px;
+        span.amount {
+          font-size: 30px;
+          min-width: 100px;
+          min-height: 48px;
+        }
+        span:not(.amount) {
+          @include font-circular-reg(17px, 20px, $black);
+        }
       }
+      .card-value-expiry {
+        @include font-circular-reg(18px, 24px, $black);
+        padding-left: 8px;
+        padding-top: 10px;
+        display: block;
+      }
+      &.wrapper-detail-code .card-value {
+        justify-content: space-between;
+      }
+    }
+  }
+  .wrapper-terms {
+    padding-left: 16px;
+    .button-link.button-terms {
+      @include font-circular-reg(16px, 20px, $color-tabs);
     }
   }
 }
