@@ -1,0 +1,26 @@
+.container-my-details {
+  .division-settings {
+    &.division-full-name {
+      display: flex;
+      > div {
+        display: flex;
+        gap: 24px;
+        width: 50%;
+      }
+      .input-field {
+        margin-bottom: 0 !important;
+        width: calc(50% - 12px);
+        label {
+          display: none;
+        }
+        input {
+          width: 100%;
+        }
+      }
+      label {
+        @include font-circular-reg(14px, 20px, $color-nav-item);
+        min-width: 25%;
+      }
+    }
+  }
+}

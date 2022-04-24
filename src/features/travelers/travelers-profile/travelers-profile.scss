@@ -29,7 +29,7 @@
             content: "";
             width: calc(100% + 15px + 40px + 40px);
             height: 1px;
-            background-color: rgba($black, 0.05);
+            background-color: $color-border;
             left: 55px;
             bottom: -1px;
             @media (max-height: 1000px) {

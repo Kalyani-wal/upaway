@@ -73,6 +73,8 @@
       height: unset;
       position: relative;
       button.rdrNextPrevButton {
+        position: relative;
+        z-index: 2;
         i {
           display: none;
         }
@@ -129,7 +131,8 @@
           .rdrDay {
             @include circle(40px);
             line-height: normal;
-            .rdrDayInPreview, .rdrDayEndPreview {
+            .rdrDayInPreview,
+            .rdrDayEndPreview {
               color: transparent !important;
             }
             .rdrDayNumber {
@@ -154,7 +157,8 @@
             }
             .rdrStartEdge,
             .rdrEndEdge {
-              + .rdrDayNumber, + span + .rdrDayNumber {
+              + .rdrDayNumber,
+              + span + .rdrDayNumber {
                 span {
                   color: #fff;
                 }
@@ -183,7 +187,8 @@
               color: #feeae1 !important;
               width: calc(100% + 5px);
               left: -5px;
-              + .rdrDayNumber, + span + .rdrDayNumber {
+              + .rdrDayNumber,
+              + span + .rdrDayNumber {
                 span {
                   color: #e18760;
                 }
@@ -223,6 +228,18 @@
           }
         }
       }
+    }
+  }
+}
+
+.rdrDayStartOfMonth {
+  .rdrInRange {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .rdrEndEdge {
+    &:before {
+      display: none;
     }
   }
 }

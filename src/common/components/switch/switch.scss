@@ -1,0 +1,36 @@
+.container-switch {
+  label {
+    @include flex(flex-start, center);
+    .react-switch-bg {
+      width: 36px !important;
+      height: 20px !important;
+      background: #F2F4F7 !important;
+      > div {
+        width: 18px !important;
+        height: 20px !important;
+        svg {
+          display: none;
+        }
+      }
+    }
+    .react-switch-handle {
+      width: 16px !important;
+      height: 16px !important;
+      top: 2px !important;
+      transform: translateX(2px) !important;
+      box-shadow: none !important;
+    }
+    &.switch-checked {
+      .react-switch-bg {
+        background: $color-primary !important;
+      }
+      .react-switch-handle {
+        transform: translateX(18px) !important;
+      }
+    }
+    .switch-name {
+      @include font-circular-reg(14px, 20px, $color-nav-item);
+      padding-left: 10px;
+    }
+  }
+}

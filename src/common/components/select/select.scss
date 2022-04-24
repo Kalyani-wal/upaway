@@ -1,0 +1,181 @@
+.select-wrapper {
+  label {
+    @include font-circular-reg(14px, 20px, $color-nav-item);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &.md {
+    .select-dropdown__value-container {
+      padding: 7px 16px;
+    }
+  }
+
+  &.sm {
+    .select-dropdown__control {
+      height: 44px;
+      min-height: 44px;
+    }
+  }
+
+  .select-dropdown__option {
+    cursor: pointer;
+    position: relative;
+
+    &--is-selected {
+      &::after {
+        top: 50%;
+        right: 5px;
+        padding: 4px;
+        border-radius: 50%;
+        font-size: 10px;
+        content: "\f00c";
+        position: absolute;
+        font-weight: 900;
+        color: $white;
+        // background-color: $brand-primary;
+
+        @include translate(-50%, -50%);
+
+        // @extend .custom-fontawesome;
+      }
+
+      background-color: $white !important;
+    }
+
+    &--is-focused {
+      background-color: $white !important;
+    }
+
+    &--is-disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+
+  > .select-dropdown--is-disabled {
+    cursor: not-allowed;
+    pointer-events: initial;
+    .select-dropdown__single-value--is-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .select-dropdown__control {
+    border: 1px solid $color-input-border;
+    border-radius: 10px;
+    box-shadow: none;
+    cursor: pointer;
+    max-width: 100%;
+
+    &.select-dropdown__control--is-disabled {
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    * {
+      font-family: $font-circular-book;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .select-dropdown__value-container {
+      padding: 5px 16px;
+    }
+
+    .select-dropdown__placeholder {
+      color: $color-tabs;
+    }
+
+    .select-dropdown__input-container {
+      img {
+        width: 20px;
+      }
+    }
+
+    .select-dropdown__single-value,
+    .select-dropdown__input {
+      color: $color-header-secondary;
+    }
+
+    .select-dropdown__indicator > svg {
+      color: $color-tabs;
+    }
+
+    .select-dropdown__indicator-separator {
+      display: none;
+    }
+  }
+
+  .select-dropdown__menu {
+    z-index: 3;
+    background-color: $white;
+    border: solid 1px #f2f4f7;
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08),
+      0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+    border-radius: 8px;
+    margin-top: 5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 0;
+      left: 94%;
+      box-sizing: border-box;
+      border: 3px solid black;
+      border-color: transparent transparent $white $white;
+      transform-origin: 0 0;
+      transform: rotate(135deg);
+      box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.07);
+    }
+
+    .select-dropdown__menu-notice--no-options {
+      @include font-circular-reg(16px, 20px, $color-tabs);
+    }
+
+    .select-dropdown__menu-list {
+      max-height: 200px;
+      overflow-y: auto;
+      .select-dropdown__option {
+        @include font-circular-reg(14px, 20px, #335962);
+        padding: 12px 16px;
+        border-bottom: solid 1px $color-border;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        > img {
+          width: 20px;
+          margin-right: 8px;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      .select-dropdown__group {
+        border-bottom: solid 1px $color-border;
+        padding: 0;
+        .select-dropdown__group-heading {
+          @include font-circular-reg(14px, 20px, #335962);
+          font-weight: 700;
+          margin: 0;
+          padding-top: 8px;
+          text-transform: capitalize;
+        }
+        .select-dropdown__option {
+          padding: 10px 10px 10px 22px;
+        }
+      }
+    }
+  }
+  &.select-timezone {
+    .select-dropdown__control .select-dropdown__value-container {
+      padding-left: 42px;
+      background: url(../../../assets/images/icon-timezone.png) no-repeat 16px 12px;
+      background-size: 16px 16px;
+    }
+  }
+}

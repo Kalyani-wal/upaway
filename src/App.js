@@ -11,13 +11,13 @@ import Dashboard from "./features/dashboard";
 import Notifications from "./features/notifications/notifications";
 import TravelersActivities from './features/travelers/travelers-activities/travelers-activities';
 import TravelersProfile from './features/travelers/travelers-profile';
+import Settings from './features/settings';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./app.scss";
 
 function App() {
   return (
     <div className="App">
-      {/* <Dashboard /> */}
       <Routes>
         <Route path="/" element={<Registration />} />
         <Route path="/splash" element={<Splash />} />
@@ -27,6 +27,7 @@ function App() {
         <Route path="/travelers" element={<TravelersActivities />}></Route>
         <Route path="/travelers/1/profile" element={<TravelersProfile />}></Route>
         <Route path="/notifications" element={<Notifications />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </div>
   );

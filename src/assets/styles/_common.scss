@@ -93,6 +93,12 @@ ul {
         color: $color-nav-item;
       }
     }
+    &.btn-smaller {
+      width: 65px;
+      &.btn-transparent {
+        width: 75px;
+      }
+    }
   }
 }
 

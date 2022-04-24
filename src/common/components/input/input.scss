@@ -21,9 +21,14 @@
     border: 1px solid $color-input-border;
     padding: 10px 16px;
     background-color: $white;
+    text-transform: capitalize;
 
     &[type="password"] {
       padding-right: 40px;
+      text-transform: none;
+    }
+    &[type="email"] {
+      text-transform: none;
     }
     &:-internal-autofill-selected {
       background-color: $white !important;
