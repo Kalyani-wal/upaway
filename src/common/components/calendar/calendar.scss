@@ -238,8 +238,24 @@
     border-bottom-left-radius: 20px;
   }
   .rdrEndEdge {
+    border-radius: 20px;
     &:before {
       display: none;
     }
+  }
+}
+.rdrDayEndOfMonth {
+  .rdrStartEdge {
+    border-radius: 20px;
+  }
+  .rdrInRange {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}
+
+.rdrDay.rdrDayPassive {
+  .rdrDayNumber span {
+    color: $color-tabs !important;
   }
 }
