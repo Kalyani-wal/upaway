@@ -2,14 +2,20 @@ import React from "react";
 import Input from "../../../common/components/input/Input";
 import Select from "../../../common/components/select/Select";
 import FileUpload from "../../../common/components/file-upload/file-upload";
+import IconFlag from "../../../assets/images/icon-US.png";
 import Avatar from "../../../assets/images/avatar-profile.png";
 import { Formik, Form } from "formik";
 
 const MyDeatils = () => {
+  const styles = {
+    "width" : "20px",
+    "marginRight": "8px",
+    "marginTop": "-4px"
+  }
   const countryOptions = [
     {
       value: "United States",
-      label: "United States",
+      label: [<img src={IconFlag} alt="Avatar" style={styles}/>, "United States"],
     },
     {
       value: "United Kingdom",
