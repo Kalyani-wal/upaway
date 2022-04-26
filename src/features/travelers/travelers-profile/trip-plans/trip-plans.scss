@@ -1,4 +1,10 @@
 .container-trip-plans {
+  .container-filters.container-calendar .dropdown .dropdown-menu {
+    @media (max-height: 1000px) {
+      max-height: calc(100vh - 25px - 25px - 74px - 25px - 49px - 30px - 40px - 15px);
+      overflow-y: auto;
+    }
+  }
   .title-search-bar-container {
     margin-bottom: 15px;
     .wrapper-filters {

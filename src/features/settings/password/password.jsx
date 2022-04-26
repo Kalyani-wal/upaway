@@ -1,4 +1,5 @@
 import React from "react";
+import { Formik, Form } from "formik";
 import Input from "../../../common/components/input/Input";
 
 const Password = () => {
@@ -16,13 +17,17 @@ const Password = () => {
           <button className="button btn-small btn-smaller">Save</button>
         </div>
       </div>
-      <div className="division-settings">
-        <Input type="email" label="Email address" />
-      </div>
-      <div className="division-settings">
-        <Input type="password" label="Current Password" />
-        <Input type="password" label="New Password" />
-      </div>
+      <Formik>
+        <Form>
+          <div className="division-settings">
+            <Input type="email" label="Email address" />
+          </div>
+          <div className="division-settings">
+            <Input type="password" label="Current Password" />
+            <Input type="password" label="New Password" />
+          </div>
+        </Form>
+      </Formik>
     </div>
   );
 };

@@ -1,4 +1,11 @@
 .container-my-details {
+  .container-form {
+    max-height: calc(100vh - 25px - 38px - 25px - 40px - 30px - 78px);
+    overflow-y: auto;
+    @media (max-height: 1000px) {
+      max-height: calc(100vh - 60px - 38px - 25px - 40px - 30px - 78px);
+    }
+  }
   .division-settings {
     &.division-full-name {
       display: flex;
@@ -6,6 +13,7 @@
         display: flex;
         gap: 24px;
         width: 50%;
+        max-width: 520px;
       }
       .input-field {
         margin-bottom: 0 !important;
@@ -19,7 +27,36 @@
       }
       label {
         @include font-circular-reg(14px, 20px, $color-nav-item);
-        min-width: 25%;
+        min-width: 30%;
+      }
+    }
+  }
+  .division-file-upload {
+    display: flex;
+    .label {
+      @include font-circular-reg(14px, 20px, $color-nav-item);
+      min-width: 30%;
+      padding-right: 15px;
+      span {
+        display: block;
+        color: #667085;
+      }
+    }
+    .container-upload {
+      display: flex;
+      gap: 20px;
+      width: 50%;
+      max-width: 520px;
+      > img {
+       @include circle(64px);
+      }
+      .file-uploader {
+        flex-grow: 1;
+        label[for="file"] {
+          max-width: unset;
+          width: 100%;
+          min-width: 0;
+        }
       }
     }
   }

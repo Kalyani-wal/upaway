@@ -1,0 +1,36 @@
+.file-uploader {
+  label[for="file"] {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: $white;
+    border: 1px solid #eaecf0;
+    border-radius: 8px;
+    .file-upload {
+      @include flex(center, center);
+      flex-direction: column;
+      cursor: pointer;
+      min-height: 126px;
+      .icon-holder {
+        @include flex(center, center);
+        @include circle(46px);
+        background-color: #f2f4f7;
+        border: 6px solid #f9fafb;
+        margin-bottom: 10px;
+        img {
+          width: 18px;
+        }
+      }
+      .text-upload {
+        @include font-circular-reg(14px, 20px, #667085);
+        margin-bottom: 4px;
+        span {
+          color: #6941c6;
+        }
+      }
+      .file-types {
+        @include font-circular-reg(12px, 18px, #667085);
+      }
+    }
+  }
+}
