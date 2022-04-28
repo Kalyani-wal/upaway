@@ -12,6 +12,12 @@ const Notifications = () => {
             outside of your notification settings.
           </span>
         </div>
+        <div className="section-buttons">
+          <button className="button btn-small btn-smaller btn-transparent">
+            Cancel
+          </button>
+          <button className="button btn-small btn-smaller">Save</button>
+        </div>
       </div>
       <div className="division-settings section-switches">
         <div className="block-info">

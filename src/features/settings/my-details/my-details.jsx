@@ -7,45 +7,49 @@ import Avatar from "../../../assets/images/avatar-profile.png";
 import { Formik, Form } from "formik";
 
 const MyDeatils = () => {
-  const styles = {
+  const stylesImg = {
     "width" : "20px",
     "marginRight": "8px",
     "marginTop": "-4px"
   }
+  const stylesUTC = {
+    "color" : "#667085",
+    "paddingLeft" : "8px"
+  }
   const countryOptions = [
     {
       value: "United States",
-      label: [<img src={IconFlag} alt="Avatar" style={styles}/>, "United States"],
+      label: [<img src={IconFlag} alt="Avatar" style={stylesImg}/>, "United States"],
     },
     {
       value: "United Kingdom",
-      label: "United States",
+      label: [<img src={IconFlag} alt="Avatar" style={stylesImg}/>, "United States"],
     },
     {
       value: "United States",
-      label: "United States",
+      label: [<img src={IconFlag} alt="Avatar" style={stylesImg}/>, "United States"],
     },
     {
       value: "United Kingdom",
-      label: "United States",
+      label: [<img src={IconFlag} alt="Avatar" style={stylesImg}/>, "United States"],
     },
   ];
   const timezoneOptions = [
     {
       value: "Pacific Standard Time (PST) UTC−08:00",
-      label: "Pacific Standard Time (PST) UTC−08:00",
+      label: ["Pacific Standard Time (PST)", <span style={stylesUTC}>UTC−08:00</span>],
     },
     {
       value: "Pacific Standard Time (PST) UTC−08:00",
-      label: "Pacific Standard Time (PST) UTC−08:00",
+      label: ["Pacific Standard Time (PST)", <span style={stylesUTC}>UTC−08:00</span>],
     },
     {
       value: "Pacific Standard Time (PST) UTC−08:00",
-      label: "Pacific Standard Time (PST) UTC−08:00",
+      label: ["Pacific Standard Time (PST)", <span style={stylesUTC}>UTC−08:00</span>],
     },
     {
       value: "Pacific Standard Time (PST) UTC−08:00",
-      label: "Pacific Standard Time (PST) UTC−08:00",
+      label: ["Pacific Standard Time (PST)", <span style={stylesUTC}>UTC−08:00</span>],
     },
   ];
   return (
