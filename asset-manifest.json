@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/upaway/static/css/main.838980c2.css",
-    "main.js": "/upaway/static/js/main.80200654.js",
+    "main.css": "/upaway/static/css/main.6f7d097e.css",
+    "main.js": "/upaway/static/js/main.1082ca93.js",
     "static/media/bg-landing-left-bottom-success.png": "/upaway/static/media/bg-landing-left-bottom-success.3e5880c5bbd8cea7b441.png",
     "static/media/bg-landing-right-up.png": "/upaway/static/media/bg-landing-right-up.71d2c0c3784f3ce585f6.png",
     "static/media/bg-landing-left-bottom.png": "/upaway/static/media/bg-landing-left-bottom.92c1372c88dc8a1aaebf.png",
@@ -14,11 +14,11 @@
     "static/media/logo.svg": "/upaway/static/media/logo.355c70df8164b88c5ef84ae96081dfe2.svg",
     "static/media/eye.svg": "/upaway/static/media/eye.e864207a2989993bbb89273b5ca65e99.svg",
     "index.html": "/upaway/index.html",
-    "main.838980c2.css.map": "/upaway/static/css/main.838980c2.css.map",
-    "main.80200654.js.map": "/upaway/static/js/main.80200654.js.map"
+    "main.6f7d097e.css.map": "/upaway/static/css/main.6f7d097e.css.map",
+    "main.1082ca93.js.map": "/upaway/static/js/main.1082ca93.js.map"
   },
   "entrypoints": [
-    "static/css/main.838980c2.css",
-    "static/js/main.80200654.js"
+    "static/css/main.6f7d097e.css",
+    "static/js/main.1082ca93.js"
   ]
 }
