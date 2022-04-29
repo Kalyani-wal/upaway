@@ -66,8 +66,8 @@ input {
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,
   &:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s !important;
-    -webkit-box-shadow: inset 0 0 0px 9999px white !important;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow: inset 0 0 0px 9999px white;
   }
 }
 
@@ -93,4 +93,21 @@ input::-webkit-credentials-auto-fill-button {
 input::-webkit-caps-lock-indicator {
   -webkit-appearance: none !important;
   content: "" !important;
+}
+
+div[contenteditable="false"] {
+  display: none !important;
+}
+
+input[contenteditable="false"] {
+  display: none !important;
+}
+
+input::-webkit-strong-password-auto-fill-button {
+  font-size: 0 !important;
+  visibility: hidden !important;
+  display: none !important;
+  right: 0 !important;
+  position: absolute !important;
+  pointer-events: none;
 }
