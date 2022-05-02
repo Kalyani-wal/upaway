@@ -3,13 +3,30 @@ import Checkbox from "../../../common/components/checkbox/Checkbox";
 import Avatar from "../../../assets/images/avatar.png";
 import IconDelete from "../../../assets/images/icon-delete.png";
 import IconEdit from "../../../assets/images/icon-edit.png";
-import AddTeamMember from "./add-team-member";
+import AddEditTeamMember from "./add-edit-team-member";
+import DeleteTeamMember from "./delete-team-member";
 
 const Team = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [edit, setEdit] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleEditTeamMember = () => {
+    setIsOpen(!isOpen);
+    setEdit(true);
+  }
+
+  const handleAddTeamMember = () => {
+    setIsOpen(!isOpen);
+    setEdit(false);
+  }
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  }
   return (
     <div className="container-team container-notifications">
-      <button className="button button-team" onClick={() => setIsOpen(!isOpen)}>Add Team Member</button>
+      <button className="button button-team" onClick={handleAddTeamMember}>Add Team Member</button>
       <div className="division-settings section-switches">
         <div className="block-info">
           <h3>Admin users</h3>
@@ -84,12 +101,12 @@ const Team = () => {
                 <td>Feb 22, 2022</td>
                 <td>Feb 22, 2022</td>
                 <td>
-                  <button className="button-link">
+                  <button className="button-link" onClick={toggleModal}>
                     <img src={IconDelete} alt="Icon Delete" />
                   </button>
                 </td>
                 <td>
-                  <button className="button-link">
+                  <button className="button-link" onClick={handleEditTeamMember}>
                     <img src={IconEdit} alt="Icon Edit" />
                   </button>
                 </td>
@@ -148,7 +165,8 @@ const Team = () => {
           </table>
         </div>
       </div>
-      <AddTeamMember isOpen={isOpen} setIsOpen={setIsOpen} />
+      <AddEditTeamMember isOpen={isOpen} setIsOpen={setIsOpen} edit={edit} />
+      <DeleteTeamMember isOpen={isModalOpen} toggle={toggleModal} />
     </div>
   );
 };
