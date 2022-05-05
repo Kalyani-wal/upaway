@@ -6,7 +6,10 @@ import {
 import Splash from "./features/registration/splash/splash";
 import Registration from "./features/registration/registration/registration";
 import Login from "./features/registration/login/login";
-import RegistrationSuccess from "./features/registration/registration-success/registrationSuccess";
+import ForgotPassword from './features/registration/forgot-password/forgot-password';
+import ResetPassword from './features/registration/forgot-password/reset-password';
+import RegistrationSuccess from "./features/registration/registration-success/registration-success";
+import ResetPasswordSuccess from "./features/registration/forgot-password/reset-password-success";
 import Dashboard from "./features/dashboard";
 import Notifications from "./features/notifications/notifications";
 import TravelersActivities from './features/travelers/travelers-activities/travelers-activities';
@@ -22,7 +25,10 @@ function App() {
         <Route path="/" element={<Registration />} />
         <Route path="/splash" element={<Splash />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/registration-success" element={<RegistrationSuccess />} />
+        <Route path="/reset-password-success" element={<ResetPasswordSuccess />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/travelers" element={<TravelersActivities />}></Route>
         <Route path="/travelers/1/profile" element={<TravelersProfile />}></Route>

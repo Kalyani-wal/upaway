@@ -33,6 +33,10 @@
       text-align: center;
       margin-bottom: 60px;
       text-transform: unset;
+      span {
+        @include font-circular-reg(25px, 50px, $white);
+        display: block;
+      }
     }
   }
 }

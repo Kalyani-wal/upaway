@@ -37,23 +37,13 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 h1 {
-  font-family: $font-circular-bold;
-  font-size: 40px;
-  line-height: 51px;
+  font: 700 40px/51px circularBold;
   color: $color-header;
 }
 
 h2 {
-  font-family: $font-inter;
-  font-weight: 600;
-  font-size: 30px;
+  font: 700 30px/38px circularBold;
   color: $color-theme;
   text-transform: capitalize;
 }
@@ -65,8 +55,9 @@ ul {
 }
 
 .button, a.button {
-  @include font-circular-reg(16px, 24px, $white);
   @include flex(center, center);
+  font: 500 16px/24px circularMedium;
+  color: $white;
   width: 325px;
   height: 64px;
   background-color: $color-theme;
@@ -99,6 +90,10 @@ ul {
         width: 75px;
       }
     }
+  }
+  &:disabled {
+    background-color: #E8EDEE;
+    color: rgba($color-theme, 0.3);
   }
 }
 

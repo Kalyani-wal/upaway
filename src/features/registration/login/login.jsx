@@ -22,9 +22,9 @@ const Login = () => {
             />
             <div className="container-forgot-remember">
               <Checkbox label="Remember Me" />
-              <button className="button-link button-forgot-pwd">
+              <Link to="/forgot-password" className="button-link button-forgot-pwd">
                 Forgot Password?
-              </button>
+              </Link>
             </div>
             <Link to="/dashboard" className="button button-register">
               Login

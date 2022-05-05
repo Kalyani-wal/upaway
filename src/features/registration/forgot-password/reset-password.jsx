@@ -5,12 +5,12 @@ import Logo from "../../../assets/images/logo.svg";
 import Input from "../../../common/components/input/Input";
 import Layout from "../../../common/components/layout/layout";
 
-const Registration = () => {
+const ResetPassword = () => {
   return (
     <Layout>
-      <div className="registration-container">
+      <div className="registration-container reset-password-container">
         <img src={Logo} alt="Upaway" className="logo" />
-        <h2 className="title">Complete registration</h2>
+        <h2 className="title">Reset Password</h2>
         <Formik>
           <Form>
             <Input placeholder="Your Email" label="Email" type="email" />
@@ -23,18 +23,14 @@ const Registration = () => {
               label="Confirm Password"
               type="password"
             />
-            <Link to="/registration-success" className="button button-register">
-              Register account
+            <Link to="/reset-password-success" className="button">
+              Reset Password
             </Link>
           </Form>
         </Formik>
-        <div className="login-text">
-          Already have an account?{" "}
-          <Link className="button-link" to="/login">Log in</Link>
-        </div>
       </div>
     </Layout>
   );
 };
 
-export default Registration;
+export default ResetPassword;
