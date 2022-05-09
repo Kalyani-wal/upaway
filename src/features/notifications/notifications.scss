@@ -6,10 +6,10 @@
     }
   }
   .container-notifications {
-    max-height: calc(100vh - 100px - 40px - 51px - 55px);
+    height: calc(100vh - 100px - 40px - 51px - 55px - 40px - 20px);
     overflow-y: auto;
     @media (max-height: 1000px) {
-      max-height: calc(100vh - 25px - 25px - 51px - 35px);
+      height: calc(100vh - 25px - 25px - 51px - 35px - 40px - 20px);
     }
   }
   .notifications-card {

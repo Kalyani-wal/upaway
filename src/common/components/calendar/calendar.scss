@@ -64,14 +64,28 @@
         }
       }
     }
-    .rdrDefinedRangesWrapper,
-    .rdrMonthAndYearPickers {
+    .rdrDefinedRangesWrapper {
       display: none;
     }
     .rdrMonthAndYearWrapper {
       padding-top: 25px;
       height: unset;
       position: relative;
+      .rdrMonthAndYearPickers {
+        flex: unset;
+        position: relative;
+        z-index: 1;
+        .rdrMonthPicker,
+        .rdrYearPicker {
+          margin: 0 10px;
+          min-width: 90px;
+          font-size: 16px;
+          select {
+            padding: 5px 25px 5px 5px;
+            background-color: transparent;
+          }
+        }
+      }
       button.rdrNextPrevButton {
         position: relative;
         z-index: 2;
@@ -91,21 +105,12 @@
       }
     }
     .rdrMonths {
-      margin-top: -25px;
       border-bottom: 1px solid $color-border;
+      margin-top: 10px;
       .rdrMonth {
         &:first-child {
           border-right: 1px solid $color-border;
           position: relative;
-          &::after {
-            position: absolute;
-            content: "";
-            width: 1px;
-            height: 25px;
-            top: -25px;
-            right: -1px;
-            background-color: $color-border;
-          }
         }
         .rdrMonthName {
           font-size: 16px;
@@ -113,7 +118,7 @@
           color: $color-nav-item;
           text-align: center;
           padding: 0;
-          margin-bottom: 30px;
+          margin-bottom: 22px;
         }
         .rdrWeekDays {
           margin-bottom: 14px;
