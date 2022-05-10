@@ -1,6 +1,7 @@
 import React from "react";
 import Calendar from "../../common/components/calendar/calendar";
 import Pagination from "../../common/components/pagination/pagination";
+import IconPolygon from "../../assets/images/icon-polygon.png";
 
 const Activities = () => {
   return (
@@ -15,10 +16,19 @@ const Activities = () => {
         <table className="table table-dashboard">
           <thead>
             <tr>
-              <th>Last interaction</th>
-              <th>Traveler</th>
-              <th>Agent</th>
-              <th>Type of user</th>
+              <th>
+                Last interaction
+                <img src={IconPolygon} alt="Polygon" />
+              </th>
+              <th>
+                Traveler <img src={IconPolygon} alt="Polygon" />
+              </th>
+              <th>
+                Agent <img src={IconPolygon} alt="Polygon" />
+              </th>
+              <th>
+                Type of user <img src={IconPolygon} alt="Polygon" />
+              </th>
             </tr>
           </thead>
           <tbody>
