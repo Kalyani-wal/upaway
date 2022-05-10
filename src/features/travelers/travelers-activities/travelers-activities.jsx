@@ -5,6 +5,7 @@ import Pagination from "../../../common/components/pagination/pagination";
 import { Link } from "react-router-dom";
 import Search from "../../../common/components/search/Search";
 import Calendar from "../../../common/components/calendar/calendar";
+import IconPolygon from "../../../assets/images/icon-polygon.png";
 
 const TravelersActivities = () => {
   return (
@@ -24,12 +25,12 @@ const TravelersActivities = () => {
           <table className="table table-travelers">
             <thead>
               <tr>
-                <th>Last interaction</th>
-                <th>Traveler</th>
-                <th>Home Location</th>
-                <th>Agent</th>
-                <th>Upcoming trips</th>
-                <th>Subscrition</th>
+                <th>Last interaction <img src={IconPolygon} alt="Polygon" /></th>
+                <th>Traveler <img src={IconPolygon} alt="Polygon" /></th>
+                <th>Home Location <img src={IconPolygon} alt="Polygon" /></th>
+                <th>Agent <img src={IconPolygon} alt="Polygon" /></th>
+                <th>Upcoming trips <img src={IconPolygon} alt="Polygon" /></th>
+                <th>Subscrition <img src={IconPolygon} alt="Polygon" /></th>
                 <th></th>
               </tr>
             </thead>

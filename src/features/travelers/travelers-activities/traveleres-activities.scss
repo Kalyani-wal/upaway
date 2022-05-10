@@ -49,6 +49,9 @@
           color: $color-tabs;
         }
       }
+      th {
+        cursor: pointer;
+      }
     }
   }
 }
