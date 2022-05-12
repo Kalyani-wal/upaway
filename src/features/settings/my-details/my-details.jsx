@@ -5,51 +5,76 @@ import FileUpload from "../../../common/components/file-upload/file-upload";
 import IconFlag from "../../../assets/images/icon-US.png";
 import Avatar from "../../../assets/images/avatar-profile.png";
 import { Formik, Form } from "formik";
+import IconEmail from "../../../assets/images/icon-email.png";
 
 const MyDeatils = () => {
   const stylesImg = {
-    "width" : "20px",
-    "marginRight": "8px",
-    "marginTop": "-4px"
-  }
+    width: "20px",
+    marginRight: "8px",
+    marginTop: "-4px",
+  };
   const stylesUTC = {
-    "color" : "#667085",
-    "paddingLeft" : "8px"
-  }
+    color: "#667085",
+    paddingLeft: "8px",
+  };
   const countryOptions = [
     {
       value: "United States",
-      label: [<img src={IconFlag} alt="Avatar" style={stylesImg}/>, "United States"],
+      label: [
+        <img src={IconFlag} alt="Avatar" style={stylesImg} />,
+        "United States",
+      ],
     },
     {
       value: "United Kingdom",
-      label: [<img src={IconFlag} alt="Avatar" style={stylesImg}/>, "United States"],
+      label: [
+        <img src={IconFlag} alt="Avatar" style={stylesImg} />,
+        "United States",
+      ],
     },
     {
       value: "United States",
-      label: [<img src={IconFlag} alt="Avatar" style={stylesImg}/>, "United States"],
+      label: [
+        <img src={IconFlag} alt="Avatar" style={stylesImg} />,
+        "United States",
+      ],
     },
     {
       value: "United Kingdom",
-      label: [<img src={IconFlag} alt="Avatar" style={stylesImg}/>, "United States"],
+      label: [
+        <img src={IconFlag} alt="Avatar" style={stylesImg} />,
+        "United States",
+      ],
     },
   ];
   const timezoneOptions = [
     {
       value: "Pacific Standard Time (PST) UTC−08:00",
-      label: ["Pacific Standard Time (PST)", <span style={stylesUTC}>UTC−08:00</span>],
+      label: [
+        "Pacific Standard Time (PST)",
+        <span style={stylesUTC}>UTC−08:00</span>,
+      ],
     },
     {
       value: "Pacific Standard Time (PST) UTC−08:00",
-      label: ["Pacific Standard Time (PST)", <span style={stylesUTC}>UTC−08:00</span>],
+      label: [
+        "Pacific Standard Time (PST)",
+        <span style={stylesUTC}>UTC−08:00</span>,
+      ],
     },
     {
       value: "Pacific Standard Time (PST) UTC−08:00",
-      label: ["Pacific Standard Time (PST)", <span style={stylesUTC}>UTC−08:00</span>],
+      label: [
+        "Pacific Standard Time (PST)",
+        <span style={stylesUTC}>UTC−08:00</span>,
+      ],
     },
     {
       value: "Pacific Standard Time (PST) UTC−08:00",
-      label: ["Pacific Standard Time (PST)", <span style={stylesUTC}>UTC−08:00</span>],
+      label: [
+        "Pacific Standard Time (PST)",
+        <span style={stylesUTC}>UTC−08:00</span>,
+      ],
     },
   ];
   return (
@@ -78,7 +103,10 @@ const MyDeatils = () => {
             </div>
           </div>
           <div className="division-settings">
-            <Input type="email" label="Email address" />
+            <div className="input-holder">
+              <Input type="email" label="Email address" />
+              <img src={IconEmail} alt="Email Icon" />
+            </div>
           </div>
           <div className="division-settings division-file-upload">
             <div className="label">

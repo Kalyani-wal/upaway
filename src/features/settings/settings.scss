@@ -1,5 +1,4 @@
 @import "./my-details/my-details.scss";
-@import "./password/password.scss";
 @import "./team/team.scss";
 @import "./notifications/notifications.scss";
 
@@ -43,6 +42,15 @@
       }
     }
   }
+  .input-holder {
+    position: relative;
+    > img {
+      position: absolute;
+      width: 16px;
+      left: calc(30% + 16px);
+      top: 15px;
+    }
+  }
   .input-field {
     display: flex;
     &:not(:last-child) {
@@ -63,8 +71,6 @@
       border-radius: 8px;
       &[type="email"] {
         padding-left: 42px;
-        background: $white url(../../assets/images/icon-email.png) no-repeat 16px 14px;
-        background-size: 16px 13px;
       }
     }
     .icon-eye {

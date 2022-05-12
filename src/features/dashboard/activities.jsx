@@ -32,6 +32,9 @@ const Activities = () => {
             </tr>
           </thead>
           <tbody>
+            {/* <div className="no-content">
+              <p>There are no activities available.</p>
+            </div> */}
             <tr>
               <td>22 Jan 2022</td>
               <td>

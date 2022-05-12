@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import Input from "../../../common/components/input/Input";
+import IconEmail from "../../../assets/images/icon-email.png";
 
 const Password = () => {
   return (
@@ -20,7 +21,13 @@ const Password = () => {
       <Formik>
         <Form>
           <div className="division-settings">
-            <Input type="email" label="Email address" />
+            <div className="input-holder">
+              <Input
+                type="email"
+                label="Email address"
+              />
+              <img src={IconEmail} alt="Email Icon" />
+            </div>
           </div>
           <div className="division-settings">
             <Input type="password" label="Current Password" />

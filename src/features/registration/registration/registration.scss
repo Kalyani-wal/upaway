@@ -27,11 +27,12 @@
     }
     .input-field {
       margin-bottom: 30px;
+      max-width: 400px;
       &:nth-last-of-type(1) {
         margin-bottom: 45px;
       }
       input {
-        max-width: 400px;
+        max-width: 100%;
       }
     }
     .passowrd-container {
