@@ -37,10 +37,10 @@
       flex-direction: column;
       li.nav-item {
         margin-bottom: 5px;
-        &:last-child {
-          a.active,
-          a:hover,
-          a:focus {
+        a.nav-link.item-notifications {
+          &.active,
+          &:hover,
+          &:focus {
             > div {
               svg path {
                 fill: $color-orange-secondary;

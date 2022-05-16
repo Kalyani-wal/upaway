@@ -1,0 +1,85 @@
+.wrapper-page-layout.wrapper-page-layout-chatdesk {
+  .layout-page-section .page-header > h1 {
+    margin-bottom: 45px;
+    @media (max-height: 1000px) {
+      margin-bottom: 30px;
+    }
+  }
+  .container-chat-boxes {
+    @include flex(flex-start, flex-start);
+    gap: 30px;
+    .chat-box {
+      width: calc((100% - 60px) / 3);
+      .chat-status {
+        @include flex(space-between, center);
+        min-height: 42px;
+        background: $color-green-secondary;
+        border-radius: 5px;
+        padding: 5px 20px;
+        margin-bottom: 18px;
+        .status {
+          @include font-circular-reg(16px, 21px, $white);
+          @include flex(flex-start, center);
+          .count {
+            @include flex(center, center);
+            min-width: 16px;
+            height: 16px;
+            background-color: rgba($white, 0.25);
+            border-radius: 5px;
+            font-family: $font-circular-bold;
+            font-weight: 600;
+            font-size: 9px;
+            margin-left: 18px;
+          }
+        }
+      }
+      .chat-latest-msgs {
+        background-color: $white;
+        filter: drop-shadow(-3.61736px 7.23472px 21.7042px rgba(44, 63, 88, 0.02));
+        border-radius: 12px;
+        padding: 20px 15px;
+        position: relative;
+        // border-top: 9px solid $color-green-secondary;
+        &:before {
+          position: absolute;
+          content: "";
+          width: calc(100% - 2px);
+          height: 16px;
+          background-color: $color-green-secondary;
+          left: 1px;
+          top: 0;
+          border-bottom: 8px solid #fff;
+          border-radius: 50vh;
+        }
+        .section-profile {
+          .user-profile {
+            .prfoile-pic {
+              img {
+
+              }
+            }
+            .profile-info {
+              > h3 {
+
+              }
+              span {
+
+              }
+            }
+          }
+        }
+        .section-messages {
+          .user-msg {
+
+          }
+          .support-team-msg {
+
+          }
+        }
+        .section-more-info {
+
+        }
+      }
+    }
+  }
+}

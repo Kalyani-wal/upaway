@@ -57,7 +57,7 @@ const SideNav = () => {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/notifications">
+            <NavLink href="/notifications" className="item-notifications active">
               <div>
                 <svg
                   width="15"
@@ -73,6 +73,28 @@ const SideNav = () => {
                 </svg>
               </div>
               <span>Notifications</span>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/chatdesk">
+              <div>
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.625 8.10419C15.6277 9.14908 15.3836 10.1798 14.9125 11.1125C14.3539 12.2302 13.4952 13.1702 12.4326 13.8274C11.3699 14.4845 10.1453 14.8329 8.89583 14.8334C7.85094 14.8361 6.82017 14.592 5.8875 14.1209L1.375 15.625L2.87917 11.1125C2.40807 10.1798 2.16394 9.14908 2.16667 8.10419C2.16715 6.85475 2.51548 5.63011 3.17265 4.56746C3.82982 3.5048 4.76987 2.6461 5.8875 2.08752C6.82017 1.61643 7.85094 1.3723 8.89583 1.37502H9.29167C10.9418 1.46606 12.5003 2.16254 13.6689 3.33112C14.8375 4.4997 15.534 6.05825 15.625 7.70836V8.10419Z"
+                    stroke="#344054"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <span>Chat</span>
             </NavLink>
           </NavItem>
         </Nav>

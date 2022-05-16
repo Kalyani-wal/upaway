@@ -15,6 +15,7 @@ import Notifications from "./features/notifications/notifications";
 import TravelersActivities from './features/travelers/travelers-activities/travelers-activities';
 import TravelersProfile from './features/travelers/travelers-profile';
 import Settings from './features/settings';
+import ChatDesk from './features/chat/chat-desk/chat-desk';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./app.scss";
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/travelers/1/profile" element={<TravelersProfile />}></Route>
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/chatdesk" element={<ChatDesk />} />
       </Routes>
     </div>
   );
