@@ -57,7 +57,7 @@ const SideNav = () => {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/notifications" className="item-notifications active">
+            <NavLink href="/notifications" className="item-notifications">
               <div>
                 <svg
                   width="15"
@@ -75,7 +75,7 @@ const SideNav = () => {
               <span>Notifications</span>
             </NavLink>
           </NavItem>
-          <NavItem>
+          {/* <NavItem>
             <NavLink href="/chatdesk">
               <div>
                 <svg
@@ -96,7 +96,7 @@ const SideNav = () => {
               </div>
               <span>Chat</span>
             </NavLink>
-          </NavItem>
+          </NavItem> */}
         </Nav>
       </div>
       <div className="sidenav-bottom">
