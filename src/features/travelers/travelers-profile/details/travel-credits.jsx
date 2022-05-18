@@ -81,7 +81,8 @@ const TravelCredits = ({ isOpen, setIsOpen }) => {
           </div>
           <div className="wrapper-terms">
             <a href="^_^" target="_blank" className="button-link button-terms">
-              Terms & conditions{" "}
+              Terms &amp; conditions <span>Link to external supplier
+              website</span>
             </a>
           </div>
         </>

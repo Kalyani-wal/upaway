@@ -75,7 +75,7 @@ const SideNav = () => {
               <span>Notifications</span>
             </NavLink>
           </NavItem>
-          {/* <NavItem>
+          <NavItem>
             <NavLink href="/chatdesk">
               <div>
                 <svg
@@ -96,7 +96,7 @@ const SideNav = () => {
               </div>
               <span>Chat</span>
             </NavLink>
-          </NavItem> */}
+          </NavItem>
         </Nav>
       </div>
       <div className="sidenav-bottom">

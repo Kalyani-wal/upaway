@@ -119,7 +119,14 @@
   .wrapper-terms {
     padding-left: 16px;
     .button-link.button-terms {
-      @include font-circular-reg(16px, 20px, $color-tabs);
+      font: 700 16px/20px circularBold;
+      color: $color-tabs;
+      // @include font-circular-reg(16px, 20px, $color-tabs);
+      span {
+        color:  $color-primary;
+        display: block;
+        text-decoration: underline;
+      }
     }
   }
 }

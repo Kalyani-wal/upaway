@@ -6,10 +6,12 @@
     }
   }
   .container-chat-boxes {
-    @include flex(flex-start, flex-start);
+    display: flex;
     gap: 30px;
     .chat-box {
       width: calc((100% - 60px) / 3);
+      display: flex;
+      flex-direction: column;
       .chat-status {
         @include flex(space-between, center);
         min-height: 42px;
@@ -20,6 +22,7 @@
         .status {
           @include font-circular-reg(16px, 21px, $white);
           @include flex(flex-start, center);
+          text-transform: capitalize;
           .count {
             @include flex(center, center);
             min-width: 16px;
@@ -33,12 +36,29 @@
           }
         }
       }
+      .container-messages {
+        max-height: calc(100vh - 140px - 51px - 45px - 42px - 18px);
+        overflow-y: auto;
+        @media (max-height: 1000px) {
+          max-height: calc(100vh - 50px - 51px - 30px - 42px - 18px);
+        }
+        .chat-latest-msgs {
+          margin-bottom: 25px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
       .chat-latest-msgs {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
         background-color: $white;
         filter: drop-shadow(-3.61736px 7.23472px 21.7042px rgba(44, 63, 88, 0.02));
         border-radius: 12px;
-        padding: 20px 15px;
+        padding: 20px;
         position: relative;
+        min-height: 280px;
         &:before {
           position: absolute;
           content: "";
@@ -51,32 +71,113 @@
           border-radius: 50vh;
         }
         .section-profile {
+          @include flex(space-between, center);
+          margin-bottom: 17px;
           .user-profile {
+            display: flex;
+            align-items: center;
             .prfoile-pic {
+              position: relative;
               img {
-
+                @include circle(57px);
               }
             }
             .profile-info {
+              margin-left: 10px;
               > h3 {
-
+                @include font-circular-reg(18px, 20px, $color-header);
+                text-transform: capitalize;
               }
               span {
-
+                @include font-circular-reg(13px, 16px, $color-text);
               }
             }
           }
         }
         .section-messages {
-          .user-msg {
-
+          flex-grow: 1;
+          margin-bottom: 15px;
+          position: relative;
+          .message {
+            @include font-circular-reg(14.5px, 20px, $color-text);
+            &:not(:nth-last-of-type(1)) {
+              margin-bottom: 10px;
+            }
+            &.msg-support-team {
+              opacity: 0.5;
+              text-align: right;
+              font-style: italic;
+            }
           }
-          .support-team-msg {
-
+          .time-info {
+            @include font-circular-reg(11px, 20px, rgba($black, 0.6));
+            display: block;
+            text-align: right;
           }
         }
-        .section-more-info {
-
+        .section-rating {
+          margin-bottom: 12px;
+          > h4 {
+            @include font-circular-reg(14.5px, 20px, $color-text);
+            margin-bottom: 5px;
+          }
+          .review-container {
+            display: flex;
+            align-items: center;
+            .review {
+              margin-right: 17px;
+              svg {
+                color: $color-yellow;
+                width: 19px;
+                &:not(:last-child) {
+                  margin-right: 5px;
+                }
+              }
+            }
+            .rating {
+              @include font-circular-reg(14.5px, 20px, $black);
+            }
+          }
+        }
+        .chat-close-info {
+          position: absolute;
+          @include flex(center, center);
+          @include font-circular-reg(12px, 20px, $color-theme);
+          width: 100%;
+          height: 52px;
+          background-color: #E5E5E5;
+          bottom: 0;
+          left: 0;
+          border-radius: 0 0 12px 12px;
+        }
+        .section-answer {
+          display: flex;
+          justify-content: flex-end;
+          .button.btn-small.btn-answer {
+            @include font-circular-reg(13.5px, 17px, $white);
+            width: 130px;
+            height: 35px;
+          }
+        }
+      }
+      &.chat-box-pending {
+        .chat-status {
+          background-color: $color-yellow-secondary;
+        }
+        .chat-latest-msgs::before {
+          background-color: $color-yellow-secondary;
+        }
+      }
+      &.chat-box-past {
+        .chat-status {
+          background-color: $color-primary;
+        }
+        .chat-latest-msgs {
+          padding-bottom: 52px;
+          &::before {
+            background-color: $color-primary;
+          }
+          
         }
       }
     }
