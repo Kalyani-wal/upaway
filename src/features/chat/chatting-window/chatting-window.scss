@@ -1,0 +1,176 @@
+.wrapper-page-layout-chat-window.wrapper-page-layout {
+  .layout-page-section {
+    padding: 0;
+    .container-chat-window {
+      display: flex;
+      gap: 20px;
+      .panel-user-details {
+        width: 350px;
+        padding: 32px 0 0 24px;
+        .arrow-back {
+          display: inline-block;
+          padding: 5px 10px;
+          margin-bottom: 25px;
+          svg {
+            color: $color-theme;
+          }
+        }
+        .section-user-profile {
+          background-color: $white;
+          padding: 12px;
+          box-shadow: 0px 3.2px 16px rgba(0, 0, 0, 0.02);
+          border-radius: 8px;
+          margin-bottom: 8px;
+          display: flex;
+          align-items: center;
+          .prfoile-pic {
+            @include circle(60px);
+          }
+          .profile-info {
+            margin-left: 9px;
+            > h3 {
+              font: 700 24px/30px circularBold;
+              color: $color-theme;
+              text-transform: capitalize;
+            }
+            span {
+              @include font-circular-reg(12px, 14px, rgba($color-theme, 0.6));
+              display: block;
+            }
+          }
+        }
+        .scroll-area {
+          max-height: calc(100vh - 32px - 34px - 25px - 84px - 8px);
+          overflow-y: auto;
+        }
+        .container-details {
+          background-color: $white;
+          padding: 12px;
+          box-shadow: 0px 3.2px 16px rgba(0, 0, 0, 0.02);
+          border-radius: 8px;
+          margin-bottom: 8px;
+          .personal-details {
+            margin-bottom: 0;
+          }
+          &.section-customer-information,
+          &.section-travel-history {
+            max-height: none;
+            padding: 20px 24px;
+            .card-detail {
+              .card-name {
+                padding-right: 10px;
+                width: 60%;
+                max-width: 140px;
+              }
+            }
+            .btn-add-notes {
+              @include font-circular-reg(13.5px, 17px, $white);
+              width: 130px;
+              height: 35px;
+              margin: 15px auto 0;
+            }
+          }
+          &.section-trip-plans {
+            padding: 20px 34px;
+            h3.title {
+              margin-bottom: 22px;
+            }
+            .section-trip-details {
+              .trip-details {
+                background-color: $white;
+                border-radius: 12px;
+                box-shadow: 0px 6.61265px 23.1443px rgba(0, 0, 0, 0.1);
+                padding-right: 40px;
+                padding-top: 10px;
+                position: relative;
+                &:not(:nth-of-type(1)) {
+                  margin-top: -15px;
+                }
+                &::before {
+                  position: absolute;
+                  content: "";
+                  height: 4.5px;
+                  width: 9px;
+                  border-radius: 6.75px 6.75px 0 0;
+                  transform: rotate(180deg);
+                  background-color: rgba($black, 0.03);
+                  top: 0;
+                  right: 35px;
+                }
+                .trip-details-inner {
+                  padding: 5px 10px 15px 15px;
+                  border-right: 0.85px dashed rgba(#a0a6b0, 0.23);
+                }
+                .airline-info {
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+                  margin-bottom: 4px;
+                  .img-holder {
+                    @include flex(center, center);
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 6px;
+                    background-color: #f4f5f6;
+                    img {
+                      max-width: 17px;
+                    }
+                    &.img-holder-without-icon {
+                      background-color: #ff5a60;
+                    }
+                  }
+                  strong {
+                    font: 700 15px/19px circularBold;
+                    color: $black;
+                  }
+                }
+                .from-to {
+                  font: 700 10px/13px circularBold;
+                  color: $black;
+                  display: block;
+                  margin-bottom: 5px;
+                }
+                .confirmation {
+                  @include font-circular-reg(9px, 12px, $black);
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+      .panel-chat-widnow {
+        flex-grow: 1;
+        background-color: $white;
+        .container-messages-chat {
+          max-height: calc(100vh - 70px);
+          overflow-y: auto;
+          padding: 40px 60px;
+          .message-box {
+            padding: 15px 20px;
+            border-radius: 15px;
+            .message {
+              @include font-circular-reg(16px, 20px, $color-theme);
+              margin: 0 0 12px;
+              > span {
+                &:not(:last-child) {
+                  margin-bottom: 10px;
+                }
+              }
+            }
+            .time {
+              @include font-circular-reg(12px, 15px, #9C9A9A);
+              text-align: right;
+            }
+            &.message-box-support-team {
+            }
+            &.message-box-user {
+              &.voice-message {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

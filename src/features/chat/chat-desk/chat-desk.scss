@@ -77,9 +77,9 @@
             display: flex;
             align-items: center;
             .prfoile-pic {
-              position: relative;
               img {
-                @include circle(57px);
+                @include circle(58px);
+                border: 1px solid $white;
               }
             }
             .profile-info {
@@ -157,6 +157,20 @@
             @include font-circular-reg(13.5px, 17px, $white);
             width: 130px;
             height: 35px;
+          }
+        }
+      }
+      &.chat-box-active {
+        .prfoile-pic {
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            @include circle(10px);
+            background-color: #5CDBB4;
+            top: 3px;
+            right: 2px;
+            z-index: -1;
           }
         }
       }

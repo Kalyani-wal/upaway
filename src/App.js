@@ -16,6 +16,7 @@ import TravelersActivities from './features/travelers/travelers-activities/trave
 import TravelersProfile from './features/travelers/travelers-profile';
 import Settings from './features/settings';
 import ChatDesk from './features/chat/chat-desk/chat-desk';
+import ChatWindow from './features/chat/chatting-window/chatting-window';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./app.scss";
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/chatdesk" element={<ChatDesk />} />
+        <Route path="/chatdesk/mark-lee" element={<ChatWindow />} />
       </Routes>
     </div>
   );

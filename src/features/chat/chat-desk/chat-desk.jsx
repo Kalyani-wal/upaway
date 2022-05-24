@@ -7,12 +7,11 @@ const ChatDesk = () => {
   return (
     <PageLayout className="wrapper-page-layout-chatdesk" headerText="Chat Desk">
       <div className="container-chat-boxes">
-        <div className="chat-box">
+        <div className="chat-box chat-box-active">
           <div className="chat-status">
             <div className="status">
               Active <span className="count">1</span>
             </div>
-            {/* <span>...</span> */}
           </div>
           <div className="container-messages">
             <ChatBox
@@ -29,7 +28,6 @@ const ChatDesk = () => {
             <div className="status">
               Pending <span className="count">1</span>
             </div>
-            {/* <span>...</span> */}
           </div>
           <div className="container-messages">
             <ChatBox
