@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/upaway/static/css/main.a7a7f83b.css",
-    "main.js": "/upaway/static/js/main.7cfa4fe2.js",
+    "main.css": "/upaway/static/css/main.226465ef.css",
+    "main.js": "/upaway/static/js/main.4a44e23d.js",
     "static/media/bg-landing-left-bottom-success.png": "/upaway/static/media/bg-landing-left-bottom-success.3e5880c5bbd8cea7b441.png",
     "static/media/bg-landing-right-up.png": "/upaway/static/media/bg-landing-right-up.71d2c0c3784f3ce585f6.png",
     "static/media/bg-landing-left-bottom.png": "/upaway/static/media/bg-landing-left-bottom.92c1372c88dc8a1aaebf.png",
@@ -14,11 +14,11 @@
     "static/media/logo-spalsh.svg": "/upaway/static/media/logo-spalsh.29a6ff6332330dedd464200c68f603da.svg",
     "static/media/logo.svg": "/upaway/static/media/logo.355c70df8164b88c5ef84ae96081dfe2.svg",
     "index.html": "/upaway/index.html",
-    "main.a7a7f83b.css.map": "/upaway/static/css/main.a7a7f83b.css.map",
-    "main.7cfa4fe2.js.map": "/upaway/static/js/main.7cfa4fe2.js.map"
+    "main.226465ef.css.map": "/upaway/static/css/main.226465ef.css.map",
+    "main.4a44e23d.js.map": "/upaway/static/js/main.4a44e23d.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7a7f83b.css",
-    "static/js/main.7cfa4fe2.js"
+    "static/css/main.226465ef.css",
+    "static/js/main.4a44e23d.js"
   ]
 }
