@@ -61,6 +61,12 @@
   .icon-eye {
     cursor: pointer;
   }
+
+  &.input-field-with-error {
+    input {
+      border-color: $color-primary;
+    }
+  }
 }
 
 input {

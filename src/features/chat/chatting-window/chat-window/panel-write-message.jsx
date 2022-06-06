@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Fade, Dropdown, DropdownToggle, DropdownMenu } from "reactstrap";
+import { Dropdown, DropdownToggle, DropdownMenu } from "reactstrap";
 import IconAttachment from "../../../../assets/images/icon-attachment.png";
 import IconEmoji from "../../../../assets/images/icon-emoji.png";
 import IconSend from "../../../../assets/images/icon-send.png";
@@ -34,17 +34,6 @@ const PanelWriteMessage = () => {
             </DropdownMenu>
           </Dropdown>
         </div>
-        {/* <div className="button-holder">
-          <button
-            className="button-link"
-            onClick={() => setIsOpenEmoji(!isOpenEmoji)}
-          >
-            <img src={IconEmoji} alt="Icon Emoji" />
-          </button>
-          <Fade in={isOpenEmoji} className="wrapper-emojis">
-            Emoji's plugin comes here.
-          </Fade>
-        </div> */}
       </div>
       <div className="input-holder">
         <div id="textbox">Type a message here...</div>

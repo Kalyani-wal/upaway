@@ -58,11 +58,11 @@ const Input = ({
           {...rest}
         />
       )}
-      {type === "password" && (
+      {(type === "password" && !formInput) ? (
         <span className="icon-eye">
           <img src={IconEye} alt="Icon Eye" />
         </span>
-      )}
+      ): null}
       {formInput && (
         <>
           {type === "password" && (
