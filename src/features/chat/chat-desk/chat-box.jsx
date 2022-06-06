@@ -1,10 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const ChatBox = ({
   status,
-  count,
   avatar,
   userName,
   location,
@@ -23,7 +23,6 @@ const ChatBox = ({
             <span>{location}</span>
           </div>
         </div>
-        {/* <span>...</span> */}
       </div>
       <div className="section-messages">
         <div className="msg-user message">{userMessage}</div>
@@ -49,7 +48,7 @@ const ChatBox = ({
         </>
       ) : (
         <div className="section-answer">
-          <button className="button btn-small btn-answer">Answer Now</button>
+          <Link to="/chatdesk/mark-lee" className="button btn-small btn-answer">Answer Now</Link>
         </div>
       )}
     </div>

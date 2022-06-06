@@ -1,7 +1,7 @@
 import React from "react";
 import PageLayout from "../../../common/components/layout/page-layout";
 import PanelUserDetails from "./user-details/panel-user-details";
-import PanelChatWindow from "./chat-window";
+import PanelChatWindow from "./chat-window/chat-window";
 
 const ChatWindow = () => {
   return (

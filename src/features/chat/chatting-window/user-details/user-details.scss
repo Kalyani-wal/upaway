@@ -4,8 +4,9 @@
     .container-chat-window {
       display: flex;
       gap: 20px;
+      height: 100vh;
       .panel-user-details {
-        width: 350px;
+        min-width: 350px;
         padding: 32px 0 0 24px;
         .arrow-back {
           display: inline-block;
@@ -61,6 +62,18 @@
                 padding-right: 10px;
                 width: 60%;
                 max-width: 140px;
+              }
+              &.card-detail-edit {
+                .card-value {
+                  display: flex;
+                  align-items: center;
+                  .button-link {
+                    margin-left: 15px;
+                    img {
+                      width: 10px;
+                    }
+                  }
+                }
               }
             }
             .btn-add-notes {
@@ -139,38 +152,24 @@
           }
         }
       }
-      .panel-chat-widnow {
-        flex-grow: 1;
-        background-color: $white;
-        .container-messages-chat {
-          max-height: calc(100vh - 70px);
-          overflow-y: auto;
-          padding: 40px 60px;
-          .message-box {
-            padding: 15px 20px;
-            border-radius: 15px;
-            .message {
-              @include font-circular-reg(16px, 20px, $color-theme);
-              margin: 0 0 12px;
-              > span {
-                &:not(:last-child) {
-                  margin-bottom: 10px;
-                }
-              }
-            }
-            .time {
-              @include font-circular-reg(12px, 15px, #9C9A9A);
-              text-align: right;
-            }
-            &.message-box-support-team {
-            }
-            &.message-box-user {
-              &.voice-message {
-              }
-            }
-          }
-        }
-      }
     }
+  }
+}
+
+//add edit notes
+.panel-travel-credits.panel-add-team-member.panel-add-edit-notes .form-team-member {
+  .butons-wrapper .btn-save {
+    width: 98px;
+  }
+  .button-delete {
+    @include font-circular-reg(18px, 23px, $color-primary);
+    text-decoration: underline;
+    margin-top: 10px;
+  }
+}
+
+.modal-dialog.modal-add-edit-notes {
+  .modal-content .modal-header {
+    margin-bottom: 50px;
   }
 }

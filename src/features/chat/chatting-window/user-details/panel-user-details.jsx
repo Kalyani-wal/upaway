@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import UserProfile from "./user-profile";
 import CustomerInformation from "./customer-information";
 import TravelHistory from "./travel-history";
@@ -9,9 +10,9 @@ import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
 const PanelUserDetails = () => {
   return (
     <div className="panel-user-details">
-      <span className="arrow-back">
+      <Link className="arrow-back" to="/chatdesk">
         <FontAwesomeIcon icon={faArrowLeftLong} />
-      </span>
+      </Link>
       <UserProfile />
       <div className="scroll-area">
         <CustomerInformation />

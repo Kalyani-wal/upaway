@@ -5,6 +5,7 @@
   height: 100vh !important;
   width: 375px !important;
   background-color: $white;
+  z-index: 2;
   &.collapse:not(.show) {
     display: block;
     right: -375px;

@@ -1,0 +1,336 @@
+.wrapper-page-layout-chat-window.wrapper-page-layout {
+  .layout-page-section {
+    .container-chat-window {
+      .panel-chat-widnow {
+        flex-grow: 1;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        .container-messages-chat {
+          flex-grow: 1;
+          position: relative;
+          .container-messages-chat-inner {
+            padding: 40px 60px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+          }
+          .message-box {
+            display: flex;
+            margin-bottom: 15px;
+            .message-holder {
+              display: inline-flex;
+              flex-direction: column;
+              max-width: 75%;
+            }
+            .message {
+              @include font-circular-reg(16px, 20px, $color-theme);
+              position: relative;
+              overflow-wrap: break-word;
+              white-space: pre-wrap;
+              padding: 15px 20px;
+              margin: 0 0 5px;
+              &:before {
+                position: absolute;
+                content: "";
+                bottom: 0;
+                width: 15px;
+                height: 20px;
+              }
+              > span {
+                display: block;
+                &:not(:last-child) {
+                  margin-bottom: 12px;
+                }
+              }
+            }
+            .time,
+            .user {
+              @include font-circular-reg(12px, 15px, #9c9a9a);
+              text-align: right;
+              display: block;
+            }
+            .user {
+              @include font-circular-reg(10px, 12px, $black);
+              margin-bottom: 5px;
+              padding-right: 5px;
+            }
+            &.message-box-support-team {
+              .message {
+                @include font-circular-reg(15px, 19x, $white);
+                background-color: $color-theme;
+                border-radius: 10.5px 10.5px 10.5px 0;
+                &:before {
+                  width: 8px;
+                  height: 16px;
+                  left: -7px;
+                  background: url(../../../../assets/images/subtract_grey.png)
+                    no-repeat;
+                  background-size: cover;
+                }
+              }
+            }
+            &.message-box-user {
+              justify-content: flex-end;
+              .message {
+                background-color: #e5e5e5;
+                border-radius: 10.5px 10.5px 0 10.5px;
+                &:before {
+                  bottom: -4px;
+                  right: -15px;
+                  background: url(../../../../assets/images/subtract_white.png)
+                    no-repeat;
+                  background-size: cover;
+                  transform: rotate(90deg);
+                }
+              }
+              &.voice-message {
+                .message {
+                  display: flex;
+                  align-items: center;
+                  padding-left: 40px;
+                  max-width: 420px;
+                  .play-btn-holder {
+                    margin-right: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .btn-play {
+                      @include flex(center, center);
+                      min-width: 24px;
+                      min-height: 24px;
+                      border-radius: 50%;
+                      border: 2px solid $color-theme;
+                      margin-bottom: 0;
+                      img {
+                        width: 6.2px;
+                        height: 8.5px;
+                      }
+                    }
+                    span.time.duration {
+                      text-align: center;
+                      color: $black;
+                      margin-top: 2px;
+                    }
+                  }
+                }
+                img {
+                  max-width: 100%;
+                }
+              }
+            }
+          }
+          .payment-box {
+            max-width: 180px;
+            background-color: $white;
+            box-shadow: 0px 0.75px 12px rgba(14, 31, 55, 0.0957441);
+            border-radius: 10.5px 10.5px 10.5px 0px;
+            padding-bottom: 10px;
+            margin-bottom: 12px;
+            .info {
+              padding: 12px 10px;
+              text-align: center;
+              .message {
+                @include font-circular-reg(11px, 14px, rgba($black, 0.5));
+                padding-bottom: 10px;
+                display: block;
+              }
+              .amount {
+                @include font-circular-reg(22.5px, 14px, $black);
+              }
+            }
+            .button.btn-small.btn-payment {
+              width: 118px;
+              height: 28.5px;
+              font-size: 9.75px;
+              background-color: $color-primary;
+              border-color: $color-primary;
+              border-radius: 3.75px;
+              margin: 0 auto;
+            }
+            &.payment-box-received {
+              padding-bottom: 0;
+              .payment-confirmation {
+                @include font-circular-reg(10px, 13px, $white);
+                @include flex(center, center);
+                height: 40px;
+                background-color: $color-green-secondary;
+                border-bottom-right-radius: 10.5px;
+              }
+            }
+          }
+          .file-upload-box {
+            display: flex;
+            align-items: center;
+            max-width: 275px;
+            padding: 17px;
+            border-radius: 14px;
+            border: 1px solid $color-input-border;
+            margin-top: 20px;
+            .file-icon {
+              width: 31px;
+            }
+            .file-upload-progress {
+              padding-left: 15px;
+              flex-grow: 1;
+              .text-holder {
+                @include flex(space-between, center);
+                margin-bottom: 12px;
+                &.text-holder-size {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  margin-bottom: 0;
+                }
+                > span {
+                  @include font-circular-reg(12px, 15px, $color-header);
+                  &.size {
+                    color: $color-light;
+                    display: block;
+                    margin-top: 5px;
+                  }
+                }
+                .close-btn {
+                  line-height: 15px;
+                  cursor: pointer;
+                  img {
+                    width: 8px;
+                  }
+                }
+              }
+              .progress {
+                height: 5px;
+                background-color: $color-input-border;
+                .progress-bar {
+                  background-color: $color-primary;
+                }
+              }
+            }
+          }
+        }
+        .container-write-messages {
+          display: flex;
+          align-items: center;
+          min-height: 60px;
+          padding: 0 40px 0 20px;
+          border-top: 1px solid $color-input-border;
+          position: relative;
+          .options-left {
+            display: flex;
+            gap: 26px;
+            margin-right: 30px;
+            min-width: 58px;
+            .button-holder {
+              .dropdown {
+                position: static;
+                .button-link {
+                  background-color: transparent !important;
+                  border: none !important;
+                  box-shadow: none !important;
+                  position: relative;
+                  z-index: 2;
+                  img {
+                    width: 16px;
+                  }
+                }
+                .fade-content.dropdown-menu {
+                  transform: none !important;
+                  height: 66px;
+                  width: 265px;
+                  background-color: $white;
+                  border-radius: 12px;
+                  filter: drop-shadow(0px 20px 50px rgba(44, 63, 88, 0.15));
+                  position: absolute;
+                  top: -78px !important;
+                  left: 6px;
+                  transition: top .15s linear;
+                  border: none;
+                  padding: 0;
+                  min-width: unset;
+                  &::after {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-left: 7.5px solid transparent;
+                    border-right: 7.5px solid transparent;
+                    border-top: 7.5px solid $white;
+                    bottom: -7.5px;
+                    left: 20px;
+                  }
+                  .button-link {
+                    @include font-circular-reg(14px, 18px, #335962);
+                    @include flex(flex-start, center);
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px 20px;
+                  }
+                  &.wrapper-emojis {
+                    padding: 10px;
+                    p {
+                      @include font-circular-reg(14px, 18px, #335962);
+                      display: flex;
+                      align-items: center;
+                      height: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .input-holder {
+            flex-grow: 1;
+            position: relative;
+            div#textbox {
+              position: absolute;
+              @include font-circular-reg(16px, 20px, $color-light);
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+            }
+            .textarea-message {
+              @include font-circular-reg(16px, 20px, $color-header-secondary);
+              user-select: text;
+              min-height: 20px;
+              max-height: 100px;
+              overflow-x: hidden;
+              overflow-y: auto;
+              word-wrap: break-word;
+              white-space: pre-wrap;
+              outline: none;
+              position: relative;
+              z-index: 1;
+            }
+            &:focus-within {
+              div#textbox {
+                visibility: hidden;
+              }
+            }
+          }
+          .options-right {
+            margin-left: 30px;
+            .button-link.button-send {
+              @include flex(center, center);
+              min-width: 32px;
+              min-height: 32px;
+              border-radius: 50%;
+              background-color: $color-primary;
+              img {
+                width: 12.5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal, ModalHeader, ModalBody } from "reactstrap";
 
-const DeleteTeamMember = ({ isOpen, setIsModalOpen, toggle }) => {
+const DeleteTeamMember = ({ isOpen, toggle }) => {
   return (
     <Modal isOpen={isOpen} toggle={toggle}>
       <ModalHeader toggle={toggle}>Are you sure you want Delete Drew as team member?</ModalHeader>
