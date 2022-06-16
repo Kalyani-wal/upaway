@@ -30,6 +30,7 @@ const Input = ({
           {label} <span>{required ? "*" : ""}</span>
         </label>
       )}
+      <div className="container-input-error">
       <input
         className={classNames("input", size)}
         disabled={disabled}
@@ -55,6 +56,7 @@ const Input = ({
           <img src={IconAlert} alt="Icon Alert" />
         </span>
       ) : null}
+      </div>
     </div>
   );
 };
