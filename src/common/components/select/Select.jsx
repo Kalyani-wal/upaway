@@ -22,7 +22,8 @@ const Select = ({
       className={classNames(
         'select-wrapper',
         size,
-        wrapperClassName
+        wrapperClassName,
+        {'select-wrapper-with-error' : errorMessage}
       )}
     >
       {label && (

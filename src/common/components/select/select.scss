@@ -171,6 +171,11 @@
       }
     }
   }
+  &.select-wrapper-with-error {
+    .select-dropdown__control {
+      border-color: $color-primary !important;
+    }
+  }
   &.select-timezone {
     .select-dropdown__control .select-dropdown__value-container {
       padding-left: 42px;
