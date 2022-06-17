@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ErrorMessage } from "formik";
 import { default as ReactSelect } from 'react-select';
 import classNames from 'classnames';
 
 const Select = ({
   label,
-  formInput,
   name,
   required,
   className,
@@ -16,6 +14,7 @@ const Select = ({
   wrapperClassName,
   kind,
   selectRef,
+  errorMessage,
   ...rest
 }) => {
   return (
@@ -31,6 +30,7 @@ const Select = ({
           {label} <span>{required ? '*' : ''}</span>
         </label>
       )}
+      <div className="container-select-error">
       <ReactSelect
         {...rest}
         classNamePrefix={className || 'select-dropdown'}
@@ -38,11 +38,12 @@ const Select = ({
         placeholder={placeholder}
         ref={selectRef}
       />
-      {/* {formInput && (
+      {errorMessage && (
         <div className="error-msg">
-          <ErrorMessage name={name} />
+          <span>{errorMessage}</span>
         </div>
-      )} */}
+      )}
+      </div>
     </div>
   );
 };
@@ -50,7 +51,6 @@ const Select = ({
 Select.propTypes = {
   wrapperClassName: PropTypes.string,
   className: PropTypes.string,
-  formInput: PropTypes.bool,
   required: PropTypes.bool,
   disabled: PropTypes.bool,
   label: PropTypes.string,
@@ -60,11 +60,11 @@ Select.propTypes = {
   size: PropTypes.oneOf(['lg', 'md', 'sm']),
   onChange: PropTypes.func.isRequired,
   kind: PropTypes.oneOf(['minimal', 'normal']),
+  errorMessage: PropTypes.string,
 };
 
 Select.defaultProps = {
   className: '',
-  formInput: true,
   required: false,
   disabled: false,
   label: '',
@@ -73,6 +73,7 @@ Select.defaultProps = {
   kind: 'normal',
   isMulti: false,
   wrapperClassName: '',
+  errorMessage: ''
 };
 
 export default Select;

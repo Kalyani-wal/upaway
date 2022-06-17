@@ -96,6 +96,10 @@
       border-color: $color-border-secondary;
     }
   }
+  .error-msg {
+    @include font-circular-reg(14px, 20px, $color-error-secondary);
+    margin-top: 6px;
+  }
   .division-settings {
     padding: 20px 0;
     border-bottom: 1px solid $color-border;
